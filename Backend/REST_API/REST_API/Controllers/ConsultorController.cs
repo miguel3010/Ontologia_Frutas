@@ -48,7 +48,6 @@ namespace REST_API.Controllers
             return Ok(recursos);
         }
 
-
         [HttpGet]
         [Route("api/resource/{resource}")]
         public IHttpActionResult getResource(string resource) {
@@ -85,7 +84,15 @@ namespace REST_API.Controllers
         [Route("api/resource/fruta/")]
         public IHttpActionResult addNewFruta(Fruta resource) {
             return Ok();
-        } 
+        }
+
+        [HttpDelete]
+        [Route("api/resource/fruta/{resourceName}")]
+        public IHttpActionResult deleteFruta(string resourceName) {
+
+            return Ok();
+        }
+
     }
 
     

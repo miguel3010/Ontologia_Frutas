@@ -22,6 +22,10 @@ export class ApiService {
     return this.http.post(this.baseURL + '/api/resource/fruta/', stringify(resource));
   }
 
+  eliminarFruta(resourceName: string) {
+    return this.http.delete(this.baseURL + '/api/resource/fruta/' + resourceName);
+  }
+
   /**
    * this.api.get_Parameters().subscribe(response => {
       this.reportData(response.json());

@@ -16,6 +16,7 @@ import { MineralComponent } from './/Components/mineral/mineral.component';
 import { DashViewComponent } from './/Views/dash-view/dash-view.component';
 import { ItemResultadoComponent } from './/Components/item-resultado/item-resultado.component';
 import { AutoresComponent } from './/Components/autores/autores.component';
+import { AgregarFrutaComponent } from  './/Components/agregar-fruta/agregar-fruta.component';
 
 
 const views: Routes = [
@@ -61,7 +62,8 @@ const views: Routes = [
     MineralComponent,
     DashViewComponent,
     ItemResultadoComponent,
-    AutoresComponent
+    AutoresComponent,
+    AgregarFrutaComponent
   ],
   imports: [
     BrowserModule,

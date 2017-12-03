@@ -15,6 +15,7 @@ import { VitaminaComponent } from './/Components/vitamina/vitamina.component';
 import { MineralComponent } from './/Components/mineral/mineral.component';
 import { DashViewComponent } from './/Views/dash-view/dash-view.component';
 import { ItemResultadoComponent } from './/Components/item-resultado/item-resultado.component';
+import { AutoresComponent } from './/Components/autores/autores.component';
 
 
 const views: Routes = [
@@ -59,7 +60,8 @@ const views: Routes = [
     VitaminaComponent,
     MineralComponent,
     DashViewComponent,
-    ItemResultadoComponent
+    ItemResultadoComponent,
+    AutoresComponent
   ],
   imports: [
     BrowserModule,

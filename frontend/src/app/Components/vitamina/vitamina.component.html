@@ -1,3 +1,53 @@
-<div class="alert alert-primary" role="alert">
-	Vitamina
-</div> 
+<h2 style="margin-bottom:1px; margin-top:15px;">Vitamina</h2>
+<hr style="margin-top:1px">
+<table class="table">
+	<thead>
+		<tr>
+			<th scope="col" style="width:20%">Propiedad</th>
+			<th scope="col">Valor</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Nombre Científico</td>
+			<td>
+				{{model.nombre_cientifico}}
+			</td>
+		</tr>
+
+		<tr>
+			<td>Nombre Común</td>
+			<td>
+				{{model.nombre_comun}}
+			</td>
+		</tr>
+
+		<tr>
+			<td>Descripción</td>
+			<td>
+				{{model.descripcion}}
+			</td>
+		</tr>
+
+		<tr>
+			<td>Peso Molar</td>
+			<td>
+				{{model.peso_molar}}
+			</td>
+		</tr>
+
+		<tr>
+			<td>Punto Ebullicion</td>
+			<td>
+				{{model.punto_ebullicion}}
+			</td>
+		</tr>
+
+		<tr>
+			<td>Punto de Fusión</td>
+			<td>
+				{{model.punto_fusion}}
+			</td>
+		</tr>
+	</tbody>
+</table>

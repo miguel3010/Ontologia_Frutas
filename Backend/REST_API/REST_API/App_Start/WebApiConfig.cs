@@ -11,6 +11,7 @@ namespace REST_API
         {
             // Configuración y servicios de API web
 
+            config.EnableCors();
             // Rutas de API web
             config.MapHttpAttributeRoutes();
 
@@ -19,6 +20,12 @@ namespace REST_API
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+               name: "ApiWithActionName",
+               routeTemplate: "api/{controller}/{action}/{id}",
+               defaults: new { id = RouteParameter.Optional }
+           );
         }
     }
 }

@@ -8,9 +8,9 @@ export class ApiService {
 
   constructor(private http: Http) { }
 
-  //get_Parameters() {
-   // return this.http.get(this.baseURL + '/api/parametros');
-  //}
+  consulta(params:any) {
+    return this.http.get(this.baseURL + '/api/consulta/');
+  }
 
   /**
    * this.api.get_Parameters().subscribe(response => {

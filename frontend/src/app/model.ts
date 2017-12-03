@@ -1,5 +1,5 @@
 export class Fruta {
-    nombre_cientifico: string;
+    nombre_Cientifico: string;
     nombre_Comun: string;
     colores: string[];
     agua: number;

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http/src/http';
+import { stringify } from 'querystring';
 
 @Injectable()
 export class ApiService {
@@ -8,8 +9,12 @@ export class ApiService {
 
   constructor(private http: Http) { }
 
-  consulta(params:any) {
-    return this.http.get(this.baseURL + '/api/consulta/');
+  consulta(params: any) {
+    return this.http.post(this.baseURL + '/api/consulta/', stringify(params));
+  }
+
+  getRecurso(resourceName: string) {
+    return this.http.get(this.baseURL + '/api/consulta/' + resourceName);
   }
 
   /**
@@ -21,7 +26,7 @@ export class ApiService {
    */
 
   //post_Parameters(data:any) {
-   // return this.http.post(this.baseURL + '/api/parametros', JSON.stringify(data));
- // }
+  // return this.http.post(this.baseURL + '/api/parametros', JSON.stringify(data));
+  // }
 
 }

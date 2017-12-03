@@ -4,9 +4,9 @@ export class Fruta {
     colores: string[];
     agua: number;
     mineral: Mineral;
-    Textura: string;
-    Sabor: string;
-    Región: Region;
+    textura: string;
+    sabor: string;
+    region: Region;
     vitamina: Vitamina;
   }
   

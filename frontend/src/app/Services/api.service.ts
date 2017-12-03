@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http/src/http';
 import { stringify } from 'querystring';
+import { Fruta } from '../model';
 
 @Injectable()
 export class ApiService {
@@ -14,7 +15,11 @@ export class ApiService {
   }
 
   getRecurso(resourceName: string) {
-    return this.http.get(this.baseURL + '/api/consulta/' + resourceName);
+    return this.http.get(this.baseURL + '/api/resource/' + resourceName);
+  }
+
+  agregarFruta(resource: Fruta) {
+    return this.http.post(this.baseURL + '/api/resource/fruta/', stringify(resource));
   }
 
   /**

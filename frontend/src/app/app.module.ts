@@ -1,3 +1,4 @@
+import { PresentacionViewComponent } from './Views/presentacion-view/presentacion-view.component';
 import { AuthGuard } from './Auth/auth-guard.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NotAuthorizedComponent } from './not-authorized/not-authorized.component';
@@ -5,10 +6,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes  } from '@angular/router';
 import { AppComponent } from './app.component';
-import { PresentacionViewComponent } from './/Views/presentacion-view/presentacion-view.component';
 import { ConsultaViewComponent } from './/Views/consulta-view/consulta-view.component';
 import { ResultadosComponent } from './/Components/resultados/resultados.component';
-import { Param-BusquedaComponent } from './/Components/param--busqueda/param--busqueda.component';
+import { ParamBusquedaComponent } from './/Components/param-busqueda/param-busqueda.component';
 import { RecursoViewComponent } from './/Views/recurso-view/recurso-view.component';
 import { FrutaComponent } from './/Components/fruta/fruta.component';
 import { VitaminaComponent } from './/Components/vitamina/vitamina.component';
@@ -19,7 +19,7 @@ import { ItemResultadoComponent } from './/Components/item-resultado/item-result
 
 const views: Routes = [
   {
-    path: 'presentacion',
+    path: '',
     component: PresentacionViewComponent
   },
   {
@@ -53,7 +53,7 @@ const views: Routes = [
     PresentacionViewComponent,
     ConsultaViewComponent,
     ResultadosComponent,
-    Param-BusquedaComponent,
+    ParamBusquedaComponent,
     RecursoViewComponent,
     FrutaComponent,
     VitaminaComponent,

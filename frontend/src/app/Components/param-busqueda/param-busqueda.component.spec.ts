@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Param-BusquedaComponent } from './param--busqueda.component';
+import { ParamBusquedaComponent } from './param-busqueda.component';
 
-describe('Param-BusquedaComponent', () => {
-  let component: Param-BusquedaComponent;
-  let fixture: ComponentFixture<Param-BusquedaComponent>;
+describe('ParamBusquedaComponent', () => {
+  let component: ParamBusquedaComponent;
+  let fixture: ComponentFixture<ParamBusquedaComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Param-BusquedaComponent ]
+      declarations: [ ParamBusquedaComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Param-BusquedaComponent);
+    fixture = TestBed.createComponent(ParamBusquedaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

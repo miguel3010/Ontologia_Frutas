@@ -21,6 +21,7 @@ namespace REST_API.Controllers
             f.nombre_Comun = "wefve";
             f.Sabor = "Amargo";
             f.Textura = "fcedc";
+            f.agua = 90;
 
             Minerales m = new Minerales();
             m.nombre_cientifico = "nn";
@@ -38,7 +39,8 @@ namespace REST_API.Controllers
             v.punto_ebullicion = 2434;
             v.punto_fusion = 235;
             f.vitamina = v;
-            
+
+            recursos.Add(f);
 
             return Ok(recursos);
         }

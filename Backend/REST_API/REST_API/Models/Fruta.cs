@@ -7,7 +7,7 @@ namespace Models
         public string nombre_cientifico;
         public string nombre_Comun;
         public List<string> colores;
-        public string agua;
+        public float agua;
         public Minerales mineral;
         public string Textura;
         public string Sabor;

@@ -9,9 +9,9 @@ namespace Models
         public List<string> colores;
         public float agua;
         public Minerales mineral;
-        public string Textura;
-        public string Sabor;
-        public Region Región;
+        public string textura;
+        public string sabor;
+        public Region region;
         public Vitamina vitamina;
     }
 }

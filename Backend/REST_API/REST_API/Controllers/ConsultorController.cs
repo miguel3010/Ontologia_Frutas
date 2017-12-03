@@ -19,8 +19,8 @@ namespace REST_API.Controllers
             f.colores.Add("Rojo");
             f.nombre_cientifico = "cse";
             f.nombre_Comun = "wefve";
-            f.Sabor = "Amargo";
-            f.Textura = "fcedc";
+            f.sabor = "Amargo";
+            f.textura = "fcedc";
             f.agua = 90;
             f.recurso = "naranja_ingertada";
 
@@ -30,7 +30,7 @@ namespace REST_API.Controllers
             m.simbolo_quimico = "H";
             f.mineral = m;
             
-            f.Región = new Region();           
+            f.region = new Region();           
 
             Vitamina v = new Vitamina();
             v.descripcion = "daec";

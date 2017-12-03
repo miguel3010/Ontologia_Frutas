@@ -85,10 +85,7 @@ namespace REST_API.Controllers
         [Route("api/resource/fruta/")]
         public IHttpActionResult addNewFruta(Fruta resource) {
             return Ok();
-        }
-
-
-
+        } 
     }
 
     

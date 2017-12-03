@@ -2,6 +2,7 @@
 {
     public class Vitamina: RecursoRDF
     {
+        public string tipo;
         public string nombre_cientifico;
         public string nombre_comun;
         public string descripcion;

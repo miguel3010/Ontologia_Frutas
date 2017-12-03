@@ -2,5 +2,6 @@
 {
     public class RecursoRDF
     {
+        public string recurso;
     }
 }

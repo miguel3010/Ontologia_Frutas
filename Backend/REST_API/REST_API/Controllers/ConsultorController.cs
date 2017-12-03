@@ -22,6 +22,7 @@ namespace REST_API.Controllers
             f.Sabor = "Amargo";
             f.Textura = "fcedc";
             f.agua = 90;
+            f.recurso = "naranja_ingertada";
 
             Minerales m = new Minerales();
             m.nombre_cientifico = "nn";
@@ -40,6 +41,8 @@ namespace REST_API.Controllers
             v.punto_fusion = 235;
             f.vitamina = v;
 
+            recursos.Add(f);
+            f.recurso = "piña";
             recursos.Add(f);
 
             return Ok(recursos);

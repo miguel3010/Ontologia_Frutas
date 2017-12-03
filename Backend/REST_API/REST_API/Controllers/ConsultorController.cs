@@ -8,7 +8,7 @@ namespace REST_API.Controllers
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ConsultorController : ApiController
     {
-        [HttpGet]
+        [HttpPost]
         [Route("api/consulta/")]
         public IHttpActionResult Idioma(ParametroBusqueda parametro)
         {
@@ -81,7 +81,7 @@ namespace REST_API.Controllers
             return Ok(f);
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("api/resource/fruta/")]
         public IHttpActionResult addNewFruta(Fruta resource) {
             return Ok();

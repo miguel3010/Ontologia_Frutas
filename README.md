@@ -47,7 +47,7 @@ ng serve –open
 ## Software usado
 * [Angular](https://angular.io/) - Frontend JS Framework
 * [Bootstrap 4](https://v4-alpha.getbootstrap.com/) - CSS Framework
-* [DotnetRDF] (https://github.com/dotnetrdf) - RDF & SPARQL API
+* [DotnetRDF](https://github.com/dotnetrdf/) - RDF & SPARQL API
 
 ## Autores
 

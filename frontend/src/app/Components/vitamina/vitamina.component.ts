@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Vitamina } from '../../model';
 
 @Component({
   selector: 'app-vitamina',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class VitaminaComponent implements OnInit {
 
   constructor() { }
-
+  @Input() public model: Vitamina;
   ngOnInit() {
   }
 

@@ -1,9 +1,9 @@
 <div class="container">
 	<div class="row">
 		<div class="col col-md-12">
-			<app-fruta *ngIf="viewNum==0">Cargando...</app-fruta>
-			<app-vitamina *ngIf="viewNum==1">Cargando...</app-vitamina>
-			<app-mineral *ngIf="viewNum==2">Cargando...</app-mineral>
+			<app-fruta *ngIf="viewNum==0" [model]="this.model" >Cargando...</app-fruta>
+			<app-vitamina *ngIf="viewNum==1" [model]="this.model" >Cargando...</app-vitamina>
+			<app-mineral *ngIf="viewNum==2" [model]="this.model" >Cargando...</app-mineral>
 		</div>
 	</div>
 </div>

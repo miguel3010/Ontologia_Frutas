@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Mineral } from '../../model';
 
 @Component({
   selector: 'app-mineral',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class MineralComponent implements OnInit {
 
   constructor() { }
-
+  @Input() public model:Mineral;
   ngOnInit() {
   }
 

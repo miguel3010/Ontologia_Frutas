@@ -13,5 +13,6 @@ namespace Models
         public string sabor;
         public List<Region> region;
         public List<Vitamina> vitamina;
+
     }
 }

@@ -3,7 +3,7 @@
 </div>
 
 
-<div class="modal fade modal-agregarFruta" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade modal-agregarFruta" #paramModal tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -16,14 +16,14 @@
         <form>
 
           <div class="form-group">
-            <label for="formNombreCientifico">Nombre Científico</label>
-            <input type="text" class="form-control" [(ngModel)]="model.nombre_cientifico" name ="nombre_cientifico" id="formNombreCientifico" placeholder="Nombre Científico">
-            <small id="formNombreCientifico" class="form-text text-muted">El nombre científico propio de la fruta.</small>
+            <label for="inNombreCientifico">Nombre Científico</label>
+            <input type="text" class="form-control" [(ngModel)]="model.nombre_cientifico" name ="nombre_cientifico" id="inNombreCientifico" placeholder="Nombre Científico">
+            <small id="smNombreCientifico" class="form-text text-muted">El nombre científico propio de la fruta.</small>
           </div>
 
           <div class="form-group">
             <label for="formNombreCientifico">Nombre Común</label>
-            <input type="text" class="form-control" [(ngModel)]="model.nombre_Comun" name="nombre_Comun" id="formNombreComun" placeholder="Escribir...">
+            <input type="text" class="form-control" [(ngModel)]="model.nombre_Comun" name="nombre_Comun" id="formNombreComun" placeholder="Nombre Común">
             <small id="formNombreCientifico" class="form-text text-muted">Nombre popular con el que se le conoce a la fruta.</small>
           </div>
 

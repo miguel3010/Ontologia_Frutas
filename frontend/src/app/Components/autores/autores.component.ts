@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./autores.component.css']
 })
 export class AutoresComponent implements OnInit {
+  
+  
 
   constructor() { }
 

@@ -43,8 +43,11 @@ namespace REST_API.Controllers
                 {
                     return Ok();
                 }
+                else {
+                    return InternalServerError();
+                }
             }
-            return BadRequest();
+            return BadRequest("Insufisiencia de datos");
         }
 
         [HttpDelete]

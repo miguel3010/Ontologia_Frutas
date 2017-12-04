@@ -14,8 +14,10 @@ export class ResultadosComponent implements OnInit {
   @Input() public editorCheck: boolean;
   @Input() public results: Fruta[];
 
+  iniciado:boolean = false;
   constructor(private _router: Router, private api: ApiService) {
     this.editorCheck = false;
+    
   }
 
   ngOnInit() {

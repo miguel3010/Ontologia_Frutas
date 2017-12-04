@@ -1,6 +1,19 @@
-<div class="container">
-	<div class="row"> 	 
-		 <div class="col-md-6 col-lg-6"  *ngFor="let model of results" style="padding-right: 0">
+<div class="container" style="margin-top: 15px;">
+
+	<!-- Mensaje de bienvenida -->
+	<div *ngIf="!results" class="jumbotron">
+		<h1 class="display-3">Ontología de Frutas</h1>
+		<p class="lead">En esta aplicación web, se realizan consultas consultas a una Ontología
+			<a href="https://www.w3.org/OWL/">OWL</a> a traves de una interfaz grafica web. </p>
+		<hr class="my-4">
+		<p>Para realizar las consultas, debe introducir ciertos parametros de busqueda haciendo click en el botón Realizar Busqueda
+			en la parte superior</p>
+	</div>
+
+
+	<!-- Resultados (Listado o mensaje de error) -->
+	<div class="row" *ngIf="results" >
+		<div class="col-md-6 col-lg-6" *ngFor="let model of results" style="padding-right: 0">
 			<div class="card">
 				<div class="card-body">
 					<h4 class="card-title">
@@ -10,10 +23,19 @@
 						<b> {{model.type}}</b> subTipo:
 						<b>No Climaterica</b>
 					</p>
-					<a *ngIf="editorCheck" [routerLink]="" (click)="eliminarFruta(model)" >  <i class="icon-remove-sign"></i>Eliminar</a>
+					<a *ngIf="editorCheck" [routerLink]="" (click)="eliminarFruta(model)">
+						<i class="icon-remove-sign"></i>Eliminar</a>
 				</div>
 			</div>
 		</div>
-		
 	</div>
+
+	<div *ngIf="!results && results.length > 0 && iniciado" class="alert alert-success" role="alert">
+			<h4 class="alert-heading">Well done!</h4>
+			<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+			<hr>
+			<p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+		  </div>
+
+
 </div>

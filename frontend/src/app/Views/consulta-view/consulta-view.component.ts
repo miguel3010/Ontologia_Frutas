@@ -23,8 +23,9 @@ export class ConsultaViewComponent implements OnInit {
 
     this.api.consulta({}).subscribe(response => {
       this.res.results = response.json();
+      this.res.iniciado = true;
     }, error => {
-      alert('Parametros de Simulación no pudieron ser obtenidos');
+      alert('No hay conexion con servidor o hay fallo en el servidor');
     });
 
   }

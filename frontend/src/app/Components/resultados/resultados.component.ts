@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Fruta } from '../../model';
 
 
 @Component({
@@ -8,7 +9,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ResultadosComponent implements OnInit {
 
-  @Input() editorCheck: boolean;
+  @Input() public editorCheck: boolean;
+  @Input() public results: Fruta[];
 
   constructor() {
     this.editorCheck = false;
@@ -16,5 +18,7 @@ export class ResultadosComponent implements OnInit {
 
   ngOnInit() {
   }
+
+
 
 }

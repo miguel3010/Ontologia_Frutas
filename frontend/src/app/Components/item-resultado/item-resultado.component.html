@@ -1,3 +1,14 @@
-<div class="alert alert-primary" role="alert">
-	ItemResultado
-</div> <button type="button" class="btn btn-outline - success" routerLink="/recurso">Recurso</button>
+<div class="col-md-6 col-lg-6" style="padding-right: 0">
+	<div class="card">
+		<div class="card-body">
+			<h4 class="card-title">
+				<a [routerLink]="" (click)="redireccionToFrutas(model)">{{model.nombre_Comun}}</a>
+			</h4>
+			<p class="card-text">Recurso de Tipo:
+				<b> {{model.type}}</b> subTipo:
+				<b>No Climaterica</b>
+			</p>
+
+		</div>
+	</div>
+</div>

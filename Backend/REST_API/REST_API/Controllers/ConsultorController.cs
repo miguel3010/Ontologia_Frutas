@@ -15,34 +15,42 @@ namespace REST_API.Controllers
             List<RecursoRDF> recursos = new List<RecursoRDF>();
 
             Fruta f = new Fruta();
+
             f.colores = new List<string>();
             f.colores.Add("Rojo");
-            f.nombre_cientifico = "cse";
-            f.nombre_Comun = "wefve";
+            f.nombre_cientifico = "Naranjae";
+            f.nombre_Comun = "Naranja";
             f.sabor = "Amargo";
-            f.textura = "fcedc";
+            f.textura = "Lisa";
             f.agua = 90;
-            f.recurso = "naranja_ingertada";
-            f.type = "Frutas";
+            f.recurso = "naranja";
+            f.type = "Fruta";
 
             Minerales m = new Minerales();
-            m.nombre_cientifico = "nn";
-            m.nombre_comun = "cwdc";
-            m.simbolo_quimico = "H";
+            m.recurso = "calcio";
+            m.nombre_cientifico = "calcium";
+            m.nombre_comun = "Calcio";
+            m.simbolo_quimico = "Ca";
+            f.mineral = new List<Minerales>();
             f.mineral.Add(m);
-            
-            f.region.Add(new Region());           
+
+            f.region = new List<Region>();
+            f.region.Add(new Region());
 
             Vitamina v = new Vitamina();
             v.descripcion = "daec";
-            v.nombre_cientifico = "ceadc";
-            v.nombre_comun = "cads";
+            v.recurso = "vitamina-c";
+            v.nombre_cientifico = "Vitaminac";
+            v.nombre_comun = "Vitamina C";
             v.peso_molar = 324;
             v.punto_ebullicion = 2434;
             v.punto_fusion = 235;
+            v.type = "Vitamina";
+            f.vitamina = new List<Vitamina>();
             f.vitamina.Add(v);
 
-            
+
+            recursos.Add(f);
             recursos.Add(f);
 
             return Ok(recursos);

@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Fruta } from './../../model';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ApiService } from '../../Services/api.service';
+import { ResultadosComponent } from '../../Components/resultados/resultados.component';
+import { Router } from '@angular/router';
+ 
 
 @Component({
   selector: 'app-consulta-view',
@@ -7,9 +12,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsultaViewComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('res')
+  public res: ResultadosComponent;
+
+  constructor(private api: ApiService, private _router: Router) { 
+
+  }
 
   ngOnInit() {
+
+    this.api.consulta({}).subscribe(response => {
+      this.res.results = response.json();
+    }, error => {
+      alert('Parametros de Simulación no pudieron ser obtenidos');
+    });
+
+  }
+
+  redireccionToFrutas(model: Fruta) {
+    this._router.navigate(['recurso/' + model.recurso]);
   }
 
 }

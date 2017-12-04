@@ -29,9 +29,9 @@ namespace REST_API.Controllers
             m.nombre_cientifico = "nn";
             m.nombre_comun = "cwdc";
             m.simbolo_quimico = "H";
-            f.mineral = m;
+            f.mineral.Add(m);
             
-            f.region = new Region();           
+            f.region.Add(new Region());           
 
             Vitamina v = new Vitamina();
             v.descripcion = "daec";
@@ -40,10 +40,9 @@ namespace REST_API.Controllers
             v.peso_molar = 324;
             v.punto_ebullicion = 2434;
             v.punto_fusion = 235;
-            f.vitamina = v;
+            f.vitamina.Add(v);
 
-            recursos.Add(f);
-            f.recurso = "piña";
+            
             recursos.Add(f);
 
             return Ok(recursos);
@@ -68,18 +67,23 @@ namespace REST_API.Controllers
             m.nombre_cientifico = "nn";
             m.nombre_comun = "cwdc";
             m.simbolo_quimico = "H";
-            f.mineral = m;
+            f.mineral = new List<Minerales>();
+            f.mineral.Add(m);
 
-            f.region = new Region();
+            f.region = new List<Region>();
+            f.region.Add(new Region());
 
             Vitamina v = new Vitamina();
             v.descripcion = "daec";
+            v.recurso = "fcsdc";
             v.nombre_cientifico = "ceadc";
             v.nombre_comun = "cads";
             v.peso_molar = 324;
             v.punto_ebullicion = 2434;
             v.punto_fusion = 235;
-            f.vitamina = v;
+            f.vitamina = new List<Vitamina>();
+            f.vitamina.Add(v);
+            
             return Ok(f);
         }
 

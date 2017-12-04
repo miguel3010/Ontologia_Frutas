@@ -8,10 +8,10 @@ namespace Models
         public string nombre_Comun;
         public List<string> colores;
         public float agua;
-        public Minerales mineral;
+        public List<Minerales> mineral;
         public string textura;
         public string sabor;
-        public Region region;
-        public Vitamina vitamina;
+        public List<Region> region;
+        public List<Vitamina> vitamina;
     }
 }

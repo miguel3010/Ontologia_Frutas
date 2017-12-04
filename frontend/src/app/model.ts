@@ -3,11 +3,11 @@ export class Fruta {
   nombre_Comun: string;
   colores: string[];
   agua: number;
-  mineral: Mineral;
+  mineral: Mineral[];
   textura: string;
   sabor: string;
-  region: Region;
-  vitamina: Vitamina;
+  region: Region[];
+  vitamina: Vitamina[];
   recurso: string;
   clases: any[];
   type: string;

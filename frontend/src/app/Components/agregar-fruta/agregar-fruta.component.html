@@ -16,48 +16,61 @@
         <form>
 
           <div class="form-group">
-            <label for="formNombreCientifico">Nombre Científico</label>
-            <input type="text" class="form-control" [(ngModel)]="model.nombre_cientifico" name ="nombre_cientifico" id="formNombreCientifico" placeholder="Nombre Científico">
-            <small id="formNombreCientifico" class="form-text text-muted">El nombre científico propio de la fruta.</small>
+            <label for="inNombreCientifico">Nombre Científico</label>
+            <input type="text" class="form-control" [(ngModel)]="model.nombre_cientifico" name ="nombre_cientifico" id="inNombreCientifico" placeholder="Nombre Científico">
+            <small id="smNombreCientifico" class="form-text text-muted">El nombre científico propio de la fruta.</small>
           </div>
 
           <div class="form-group">
-            <label for="formNombreCientifico">Nombre Común</label>
-            <input type="text" class="form-control" [(ngModel)]="model.nombre_Comun" name="nombre_Comun" id="formNombreComun" placeholder="Escribir...">
-            <small id="formNombreCientifico" class="form-text text-muted">Nombre popular con el que se le conoce a la fruta.</small>
+            <label for="inNombreComun">Nombre Común</label>
+            <input type="text" class="form-control" [(ngModel)]="model.nombre_Comun" name="nombre_Comun" id="inNombreComun" placeholder="Nombre Común">
+            <small id="smNombreComun" class="form-text text-muted">Nombre popular con el que se le conoce a la fruta.</small>
           </div>
 
        
-          <div class="form-control">
-            <label for="formColores">Color</label>
-            <input type="text" class="form-control" id="formColores" placeholder="Escribir...">
+          <div class="form-group">
+            <label for="inColores">Colores</label>
+            <input type="text" class="form-control" [(ngModel)]="model.colores" name="colores" id="inColores" placeholder="Colores">
+            <small id="smColores" class="form-text text-muted">Colores que tiene comúnmente la fruta.Colores.</small>
           </div>
 
 
-          <div class="form-control">
-            <label for="porcentageagua" class="col-2 col-form-label">Porcentaje de Agua</label>
-            <input class="form-control" type="number" id="porcentageagua" placeholder="1-100%" min="0" Max="100">
+          <div class="form-group">
+            <label for="inAgua">Porcentaje de agua</label>
+            <input type="text" class="form-control" [(ngModel)]="model.agua" name="agua" id="inAgua" placeholder="Agua">
+            <small id="smAgua" class="form-text text-muted">Porcentaje de agua que contiene la fruta.</small>
           </div>
-          <div class="form-control">
-            <label for="formMinerales">Mineral</label>
-            <input type="text" class="form-control" id="formMinerales" placeholder="Escribir...">
+
+          <div class="form-group">
+            <label for="inMineral">Mineral</label>
+            <input type="text" class="form-control" [(ngModel)]="model.mineral" name="mineral" id="inMineral" placeholder="Mineral">
+            <small id="smMineral" class="form-text text-muted">Es describir los diferentes minerales que tiene la fruta Ejemplo: Hierro, Cobre, Calcio entre otros.</small>
           </div>
-          <div class="form-control">
-            <label for="formTextu">Textura</label>
-            <input type="text" class="form-control" id="formTextu" placeholder="Escribir...">
+
+          <div class="form-group">
+            <label for="intextura">Textura</label>
+            <input type="text" class="form-control" [(ngModel)]="model.textura" name="textura" id="intextura" placeholder="Textura">
+            <small id="smtextura" class="form-text text-muted">Es la textura de la piel que tienen las frutas.</small>
           </div>
-          <div class="form-control">
-            <label for="formSabor">Sabor</label>
-            <input type="text" class="form-control" id="formSabor" placeholder="Escribir...">
+
+          <div class="form-group">
+            <label for="insabor">Sabor</label>
+            <input type="text" class="form-control" [(ngModel)]="model.sabor" name="sabor" id="insabor" placeholder="Sabor">
+            <small id="smsabor" class="form-text text-muted">Es el sabor que tiene que tiene las frutas como puede ser amarga, dulce, acido entre otros.</small>
           </div>
-          <div class="form-control">
-            <label for="formRegion">Region</label>
-            <input type="text" class="form-control" id="formRegion" placeholder="Escribir...">
+
+          <div class="form-group">
+            <label for="inregion">Región</label>
+            <input type="text" class="form-control" [(ngModel)]="model.region" name="region" id="inregion" placeholder="Región">
+            <small id="smregion" class="form-text text-muted">Región de la fruta. </small>
           </div>
-          <div class="form-control">
-            <label for="formVitamina">Vitamina</label>
-            <input type="text" class="form-control" id="formVitamina" placeholder="Escribir...">
+
+          <div class="form-group">
+            <label for="invitamina">Vitamina</label>
+            <input type="text" class="form-control" [(ngModel)]="model.vitamina" name="vitamina" id="invitamina" placeholder="Vitamina">
+            <small id="smvitamina" class="form-text text-muted">Las Vitamina que contiene la fruta.</small>
           </div>
+
         </form>
       </div>
       <div class="modal-footer">

@@ -139,6 +139,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ConsultorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DataSource\Ontologia.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

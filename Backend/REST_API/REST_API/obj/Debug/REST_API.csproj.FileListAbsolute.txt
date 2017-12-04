@@ -1,5 +1,3 @@
-C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\obj\Debug\REST_API.csprojResolveAssemblyReference.cache
-C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\obj\Debug\REST_API.csproj.CoreCompileInputs.cache
 C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\bin\roslyn\csc.exe
 C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\bin\roslyn\csc.exe.config
 C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\bin\roslyn\csc.rsp
@@ -63,5 +61,7 @@ C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\bin\S
 C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\bin\es\System.Net.Http.Formatting.resources.dll
 C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\bin\es\System.Web.Http.resources.dll
 C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\bin\es\System.Web.Http.WebHost.resources.dll
+C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\obj\Debug\REST_API.csprojResolveAssemblyReference.cache
+C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\obj\Debug\REST_API.csproj.CoreCompileInputs.cache
 C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\obj\Debug\REST_API.dll
 C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\obj\Debug\REST_API.pdb

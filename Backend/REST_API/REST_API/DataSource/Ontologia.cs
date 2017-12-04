@@ -50,11 +50,10 @@ namespace DataSource
 
                 Ontologia.resources.Add(f);
                 Ontologia.resources.Add(m);
-                Ontologia.resources.Add(v);
+                Ontologia.resources.Add(v); 
             }
         }
-
-
+        
         public List<Fruta> consulta(ParametroBusqueda param)
         {
             List<Fruta> res = new List<Fruta>();

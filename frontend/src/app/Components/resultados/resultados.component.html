@@ -10,7 +10,7 @@
 						<b> {{model.type}}</b> subTipo:
 						<b>No Climaterica</b>
 					</p>
-		
+					<a *ngIf="editorCheck" [routerLink]="" (click)="eliminarFruta(model)" >  <i class="icon-remove-sign"></i>Eliminar</a>
 				</div>
 			</div>
 		</div>

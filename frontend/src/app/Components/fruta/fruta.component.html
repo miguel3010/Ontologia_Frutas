@@ -1,5 +1,5 @@
-<h2 style="margin-bottom:1px; margin-top:15px;">Fruta</h2>
-<small>Recurso de Tipo: Fruta1, Fruta2</small>
+<h2 style="margin-bottom:1px; margin-top:15px;">{{model.nombre_Comun}}</h2>
+<small>Recurso de Tipo: {{model.type}}</small>
 <hr style="margin-top:1px">
 <table class="table">
 	<thead>
@@ -40,8 +40,8 @@
 		<tr>
 			<td>Mineral</td>
 			<td>
-					<a *ngFor="let item of model.mineral" (click)="redirectToResource(item)">{{item.nombre_comun}}</a>
-				</td>
+				<a [routerLink]="" *ngFor="let item of model.mineral" (click)="redirectToResource(item)">{{item.nombre_comun}}</a>
+			</td>
 		</tr>
 
 		<tr>
@@ -61,14 +61,14 @@
 		<tr>
 			<td>Región</td>
 			<td>
-				<a *ngFor="let item of model.region" (click)="redirectToResource(item)">{{item.recurso}}</a>
+				<a [routerLink]="" *ngFor="let item of model.region" (click)="redirectToResource(item)">{{item.recurso}}</a>
 			</td>
 		</tr>
 
 		<tr>
 			<td>Vitamina</td>
 			<td>
-				<a *ngFor="let item of model.vitamina" (click)="redirectToResource(item)">{{item.nombre_comun}}</a>
+				<a [routerLink]="" *ngFor="let item of model.vitamina" (click)="redirectToResource(item)">{{item.nombre_comun}}</a>
 			</td>
 		</tr>
 	</tbody>

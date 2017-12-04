@@ -4,8 +4,7 @@ namespace Models
 {
     public class RecursoRDF
     {
-        public string recurso;
-        public List<string> clases;
+        public string recurso; 
         public string type;
     }
 }

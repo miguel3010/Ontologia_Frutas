@@ -2,10 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from "../../Services/api.service";
 import { ActivatedRoute } from '@angular/router';
 import { Params } from '@angular/router/src/shared';
-
-
-
-
+import { Router } from '@angular/router';
+ 
 @Component({
   selector: 'app-recurso-view',
   templateUrl: './recurso-view.component.html',
@@ -14,7 +12,7 @@ import { Params } from '@angular/router/src/shared';
 export class RecursoViewComponent implements OnInit {
 
   constructor(private api: ApiService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,private _router: Router) { }
 
   public model: any;
   public resourceName;
@@ -34,6 +32,8 @@ export class RecursoViewComponent implements OnInit {
       this.showModel();
     }, error => {
       //error
+      this._router.navigate(['**']);
+
     });
   }
 
@@ -46,7 +46,7 @@ export class RecursoViewComponent implements OnInit {
       } else if (this.model.type == "Vitamina") {
         this.viewNum = 2;
       }
-    }
+    } 
   }
 
 }

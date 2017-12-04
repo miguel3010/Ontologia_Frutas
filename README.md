@@ -19,11 +19,10 @@ Para permitir el ingreso de instacias a la ontología se utilizó una base de da
 
 La aplicación se desarrollará en el lenguaje de programacion C# y se utilizará la libreria dotNetRDF que permite analizar, administrar, consultar y escribir RDF.
 
-### Prerequisitos
+### Pre-requisitos
 
 Todo lo que necesitas instalar para la configuración del proyecto.
 
-What things you need to install for the project setup.
 
 -Servidor NodeJS (Angular) / NodeJS Server (Angular):
 
@@ -32,27 +31,28 @@ npm install -g @angular/cli
 ```
 
 ### Inicio / Run
-Abra la terminal en la ruta del repositorio / Open a terminar in the repository url:
--Servidor Python
+Abra la terminal en la ruta del repositorio
+-Servidor Apache Jena Fuseki
 ```
 cd backend
-python app.py
+??????????????
 ```
 
--Servidor NodeJS (Angular) (solo para ambiente de desarrollo / only dev mode)
+-Servidor NodeJS (Angular)
 ```
 cd frontend 
 ng serve –open
 ``` 
 
-## Software usado / Built With
+## Software usado
 * [Angular](https://angular.io/) - Frontend JS Framework
 * [Bootstrap 4](https://v4-alpha.getbootstrap.com/) - CSS Framework
+* [DotnetRDF] (https://github.com/dotnetrdf) - RDF & SPARQL API
 
-## Autores / Authors
+## Autores
 
 * **Miguel Ángel Campos** - *Fullstack Developer* - [Twitter](https://twitter.com/Miguel_Angel_30)
-* **Luis Yao** - *Fullstack Developer* - [Twitter](https://twitter.com/notLwiz)
+* **Luis Yao Yang** - *Fullstack Developer* - [Twitter](https://twitter.com/notLwiz)
 * **José Varela** - *Fullstack Developer* - [Instagram](https://www.instagram.com/jose_vr26/)
 * **Anell Zheng** - *Fullstack Developer* - [Facebook](https://www.facebook.com/anell.zheng)
 * **David Soto** - *Fullstack Developer* - [Facebook](https://www.facebook.com/stfu.u.n00bster)

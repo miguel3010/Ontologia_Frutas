@@ -10,7 +10,7 @@ declare var jQuery: any;
 })
 export class AgregarFrutaComponent implements OnInit {
 
-  model: Fruta;
+  public model: Fruta;
   @ViewChild('paramModal') myModal: ElementRef;
   constructor(private api: ApiService) {
     this.model = new Fruta();
@@ -19,12 +19,14 @@ export class AgregarFrutaComponent implements OnInit {
   ngOnInit() {
   }
 
-  agregarFruta(model: Fruta) {
-    this.api.agregarFruta(model).subscribe(response => {
+  agregarFruta() {
+    alert("cesc");
+    this.api.agregarFruta(this.model).subscribe(response => {
       jQuery(this.myModal.nativeElement).modal('hide');
     }, error => {
       alert(error.json().message);
-    });
+      
+    });console.log(this.model);
   }
 
 }

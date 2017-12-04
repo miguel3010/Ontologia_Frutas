@@ -16,6 +16,12 @@
         <form>
 
           <div class="form-group">
+            <label for="inNombreCientifico">Recurso</label>
+            <input type="text" class="form-control" [(ngModel)]="model.recurso" name="recurso" id="inNombreCientifico" placeholder="Recurso">
+            <small id="smNombreCientifico" class="form-text text-muted">El nombre del recurso RDF.</small>
+          </div>
+
+          <div class="form-group">
             <label for="inNombreCientifico">Nombre Científico</label>
             <input type="text" class="form-control" [(ngModel)]="model.nombre_cientifico" name="nombre_cientifico" id="inNombreCientifico"
               placeholder="Nombre Científico">
@@ -38,7 +44,7 @@
 
           <div class="form-group">
             <label for="inAgua">Porcentaje de agua</label>
-            <input type="text" class="form-control" [(ngModel)]="model.agua" name="agua" id="inAgua" placeholder="Agua">
+            <input type="number" class="form-control" [(ngModel)]="model.agua" name="agua" id="inAgua" placeholder="Agua">
             <small id="smAgua" class="form-text text-muted">Porcentaje de agua que contiene la fruta.</small>
           </div>
 
@@ -74,7 +80,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Agregar</button>
+        <button type="button" class="btn btn-primary" (click)="agregarFruta()">Agregar</button>
       </div>
     </div>
   </div>

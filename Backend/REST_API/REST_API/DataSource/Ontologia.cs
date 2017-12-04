@@ -86,6 +86,7 @@ namespace DataSource
             if (res != null)
             {
                 Ontologia.resources.Add(res);
+                return true;
             }
             return false;
         }

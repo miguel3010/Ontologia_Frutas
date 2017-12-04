@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-param-busqueda',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParamBusquedaComponent implements OnInit {
 
+  @Input() public editor = false;
   constructor() { }
 
   ngOnInit() {

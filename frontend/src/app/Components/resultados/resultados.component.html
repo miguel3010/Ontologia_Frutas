@@ -12,7 +12,7 @@
 
 
 	<!-- Resultados (Listado o mensaje de error) -->
-	<div class="row" *ngIf="results" >
+	<div class="row" *ngIf="results">
 		<div class="col-md-6 col-lg-6" *ngFor="let model of results" style="padding-right: 0">
 			<div class="card">
 				<div class="card-body">
@@ -31,11 +31,11 @@
 	</div>
 
 	<div *ngIf="!results && results.length > 0 && iniciado" class="alert alert-success" role="alert">
-			<h4 class="alert-heading">Well done!</h4>
-			<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-			<hr>
-			<p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
-		  </div>
+		<h4 class="alert-heading">No se ha encontrado recurso.</h4>
+		<p>No se ha encontrado recurso con los parametros de busqueda proveeido.</p>
+		<hr>
+		<p class="mb-0">Modificar los parametros para llega a la conclusión deseada.</p>
+	</div>
 
 
 </div>

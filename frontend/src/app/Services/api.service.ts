@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http/src/http';
+import { Http } from '@angular/http';
 import { stringify } from 'querystring';
 import { Fruta } from '../model';
 
 @Injectable()
 export class ApiService {
 
-  private baseURL = 'http://127.0.0.1:5000';
+  private baseURL = 'http://localhost:64665/';
 
   constructor(private http: Http) { }
 

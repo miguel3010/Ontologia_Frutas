@@ -23,6 +23,7 @@ namespace REST_API.Controllers
             f.textura = "fcedc";
             f.agua = 90;
             f.recurso = "naranja_ingertada";
+            f.type = "Frutas";
 
             Minerales m = new Minerales();
             m.nombre_cientifico = "nn";
@@ -52,6 +53,7 @@ namespace REST_API.Controllers
         [Route("api/resource/{resource}")]
         public IHttpActionResult getResource(string resource) {
             Fruta f = new Fruta();
+            
             f.colores = new List<string>();
             f.colores.Add("Rojo");
             f.nombre_cientifico = "cse";
@@ -60,6 +62,7 @@ namespace REST_API.Controllers
             f.textura = "fcedc";
             f.agua = 90;
             f.recurso = "naranja_ingertada";
+            f.type = "Fruta";
 
             Minerales m = new Minerales();
             m.nombre_cientifico = "nn";
@@ -89,7 +92,6 @@ namespace REST_API.Controllers
         [HttpDelete]
         [Route("api/resource/fruta/{resourceName}")]
         public IHttpActionResult deleteFruta(string resourceName) {
-
             return Ok();
         }
 

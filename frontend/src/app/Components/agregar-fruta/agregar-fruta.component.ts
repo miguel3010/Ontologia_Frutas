@@ -1,3 +1,4 @@
+import { Fruta } from './../../model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgregarFrutaComponent implements OnInit {
 
-  constructor() { }
+  model: Fruta;
+  constructor() {
+    this.model = new Fruta();
+  }
 
-  ngOnInit() {
+  ngOnInit() { 
   }
 
 }

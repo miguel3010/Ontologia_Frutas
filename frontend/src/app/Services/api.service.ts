@@ -1,17 +1,22 @@
+
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, RequestOptions, Headers, URLSearchParams } from '@angular/http';
 import { stringify } from 'querystring';
 import { Fruta } from '../model';
 
 @Injectable()
 export class ApiService {
 
-  private baseURL = 'http://localhost:64665/';
+  private baseURL = 'http://localhost:64665';
 
   constructor(private http: Http) { }
 
   consulta(params: any) {
-    return this.http.post(this.baseURL + '/api/consulta/', stringify(params));
+    const requestOptions = new RequestOptions();
+    requestOptions.headers = new Headers();
+    requestOptions.headers.append('Content-Type', 'application/json');
+    requestOptions.headers.append('Accept', 'application/json');
+    return this.http.post(this.baseURL + '/api/consulta/', params,requestOptions);
   }
 
   getRecurso(resourceName: string) {

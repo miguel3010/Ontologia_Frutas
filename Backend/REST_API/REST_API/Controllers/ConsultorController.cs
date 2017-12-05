@@ -57,8 +57,5 @@ namespace REST_API.Controllers
             new Ontologia().deleteFruta(resourceName);
             return Ok();
         }
-
     }
-
-
 }

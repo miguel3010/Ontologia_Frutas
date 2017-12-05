@@ -12,7 +12,6 @@ namespace Models
         public List<string> region;
         public string textura;
         public string sabor; 
-        public List<Vitamina> vitamina;
-
+        public List<Vitamina> vitamina; 
     }
 }

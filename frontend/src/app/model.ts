@@ -6,11 +6,28 @@ export class Fruta {
   mineral: Mineral[];
   textura: string;
   sabor: string;
-  region: string;
+  region: string[];
   vitamina: Vitamina[];
   recurso: string;
   clases: any[];
   type: string;
+
+  constructor(){
+    this.nombre_cientifico = "";
+   
+    this.nombre_Comun = "";
+    this.colores = new Array();
+    this.agua = 0;
+    this.mineral = new Array();
+    this.textura = "";
+    this.sabor = "";
+    this.region = new Array();
+    this.vitamina = new Array();
+    this.recurso = "";
+    this.clases = new Array();
+    this.type = "";
+
+  }
 }
 
 export class Vitamina {

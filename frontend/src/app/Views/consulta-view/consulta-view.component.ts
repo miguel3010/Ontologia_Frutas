@@ -19,14 +19,7 @@ export class ConsultaViewComponent implements OnInit {
 
   }
 
-  ngOnInit() {
-
-    this.api.consulta({}).subscribe(response => {
-      this.res.results = response.json();
-      this.res.iniciado = true;
-    }, error => {
-      alert('No hay conexion con servidor o hay fallo en el servidor');
-    });
+  ngOnInit() { 
 
   }
 

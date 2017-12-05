@@ -1,27 +1,53 @@
+<div class="col col-md-2">
+	<button type="button" class="btn btn-primary " data-toggle="modal" data-target=".modal-busqueda">Realizar Consulta</button>
+</div>
 
-		<div class="col col-md-2">
-			<button type="button" class="btn btn-primary " data-toggle="modal" data-target=".modal-busqueda">Realizar Consulta</button>
-		</div> 
-
-<div class="modal fade modal-busqueda" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade modal-busqueda" #consultaModal tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-lg">
 
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+				<h5 class="modal-title" id="exampleModalLongTitle">Parametros de Consulta</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
 			<div class="modal-body">
-				 
+				<form> 
+					<div class="form-group">
+						<label for="inColores">Colores</label>
+						<input type="text" class="form-control" [(ngModel)]="color" name="colores" id="inColores" placeholder="Colores">
+						<small id="smColores" class="form-text text-muted">Colores que tiene comúnmente la fruta.Colores.</small>
+					</div> 
+
+					<div class="form-group">
+						<label for="inMineral">Mineral</label>
+						<input type="text" class="form-control" [(ngModel)]="mineral" name="mineral" id="inMineral" placeholder="Mineral">
+						<small id="smMineral" class="form-text text-muted">Es describir los diferentes minerales que tiene la fruta Ejemplo: Hierro, Cobre, Calcio entre otros.</small>
+					</div> 
+
+					<div class="form-group">
+						<label for="insabor">Sabor</label>
+						<input type="text" class="form-control" [(ngModel)]="sabor" name="sabor" id="insabor" placeholder="Sabor">
+						<small id="smsabor" class="form-text text-muted">Es el sabor que tiene que tiene las frutas como puede ser amarga, dulce, acido entre otros.</small>
+					</div>
+
+					<div class="form-group">
+						<label for="inregion">Región</label>
+						<input type="text" class="form-control" [(ngModel)]="region" name="region" id="inregion" placeholder="Región">
+						<small id="smregion" class="form-text text-muted">Región de la fruta. </small>
+					</div>
+
+					<div class="form-group">
+						<label for="invitamina">Vitamina</label>
+						<input type="text" class="form-control" [(ngModel)]="vitamina" name="vitamina" id="invitamina" placeholder="Vitamina">
+						<small id="smvitamina" class="form-text text-muted">Las Vitamina que contiene la fruta.</small>
+					</div>
+				</form>
 			</div>
-			<div class="modal-footer"> 
-				<button type="button" class="btn btn-primary">Consultar</button>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" (click)="consulta()" >Consultar</button>
 			</div>
 		</div>
 	</div>
 </div>
-
-
- 

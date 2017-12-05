@@ -18,9 +18,9 @@ export class Vitamina {
   nombre_cientifico: string;
   nombre_comun: string;
   descripcion: string;
-  peso_molar: number;
-  punto_ebullicion: number;
-  punto_fusion: number;
+  peso_molar: string;
+  punto_ebullicion: string;
+  punto_fusion: string;
   recurso: string;
   clases: any[];
   type: string;

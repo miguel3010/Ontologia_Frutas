@@ -13,6 +13,7 @@ export class FrutaComponent implements OnInit {
   constructor(private _router: Router) { }
 
   ngOnInit() {
+    console.log(this.model);
   }
 
   redirectToResource(res) {

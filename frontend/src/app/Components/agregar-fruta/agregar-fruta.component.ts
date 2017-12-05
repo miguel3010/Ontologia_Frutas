@@ -17,6 +17,7 @@ export class AgregarFrutaComponent implements OnInit {
   }
 
   ngOnInit() {
+    
   }
 
   agregarFruta() {    

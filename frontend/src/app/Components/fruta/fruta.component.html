@@ -5,7 +5,7 @@
 	<thead>
 		<tr>
 			<th scope="col" style="width:20%">Propiedad</th>
-			<th scope="col" style="text-align:center ">Valor</th>
+			<th scope="col" >Valor</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -38,10 +38,12 @@
 		</tr>
 
 		<tr>
-			<td>Mineral</td>
-			<td>
-				<a [routerLink]="" *ngFor="let item of model.mineral" (click)="redirectToResource(item)">{{item.nombre_comun}}</a>
-			</td>
+			<td>Mineral</td> 
+			<ul>
+				<li  *ngFor="let item of model.mineral" >
+					<a [routerLink]="" (click)="redirectToResource(item)">{{item.nombre_comun}}</a>
+				</li>
+			</ul>
 		</tr>
 
 		<tr>
@@ -56,11 +58,17 @@
 			<td>
 				{{model.sabor}}
 			</td>
-		</tr> 
+		</tr>
 		<tr>
 			<td>Vitamina</td>
 			<td>
-				<a [routerLink]="" *ngFor="let item of model.vitamina" (click)="redirectToResource(item)">{{item.nombre_comun}}</a>
+				<ul>
+					<li *ngFor="let item of model.vitamina">
+						<a [routerLink]="" (click)="redirectToResource(item)">{{item.nombre_comun}}</a>
+					</li>
+				</ul>
+
+
 			</td>
 		</tr>
 	</tbody>

@@ -49,9 +49,8 @@ namespace DataSource
                 v.recurso = "vitamina-c";
                 v.nombre_cientifico = "Vitaminac";
                 v.nombre_comun = "Vitamina C";
-                v.peso_molar = 324;
-                v.punto_ebullicion = 2434;
-                v.punto_fusion = 235;
+                 
+               
                 v.type = "Vitamina";
                 f.vitamina = new List<Vitamina>();
                 f.vitamina.Add(v);
@@ -181,33 +180,31 @@ namespace DataSource
             try
             {
                 SparqlResultSet res1 = (SparqlResultSet)e;
-                res = new Fruta();
+                if (!res1.IsEmpty)
+                {
+                    res = new Fruta();
 
-                var item = res1[0];
-                res.recurso = resource;
-                res.type = "Fruta";
-                res.nombre_Comun = (string)item[0].ToString();
-                res.nombre_cientifico = (string)item[1].ToString();
-                res.colores = new List<string>(item[2].ToString().Split(','));
-                res.sabor = (string)item[3].ToString();
-                res.textura = (string)item[4].ToString();
-                string dd = item[5].ToString();
-                dd = dd.Remove(dd.IndexOf('g')).Trim();
-                res.agua = (int)Convert.ToDouble(dd);
-                res.mineral = getMinerales(resource);
-                res.vitamina = getVitaminas(resource);
+                    var item = res1[0];
+                    res.recurso = resource;
+                    res.type = "Fruta";
+                    res.nombre_Comun = (string)item[0].ToString();
+                    res.nombre_cientifico = (string)item[1].ToString();
+                    res.colores = new List<string>(item[2].ToString().Split(','));
+                    res.sabor = (string)item[3].ToString();
+                    res.textura = (string)item[4].ToString();
+                    string dd = item[5].ToString();
+                    dd = dd.Remove(dd.IndexOf('g')).Trim();
+                    res.agua = (int)Convert.ToDouble(dd);
+                    res.mineral = getMinerales(resource);
+                    res.vitamina = getVitaminas(resource);
 
-
+                }
             }
             catch (Exception ex) { }
 
             return res;
         }
-        /// <summary>
-        /// Lectura de lista de Vitaminas dado un recurso de Fruta
-        /// </summary>
-        /// <param name="resources"></param>
-        /// <returns></returns>
+
         private List<Vitamina> getVitaminas(string resources)
         {
             List<Vitamina> res = null;
@@ -244,11 +241,7 @@ namespace DataSource
 
             return res;
         }
-        /// <summary>
-        /// Lectura de lista de minerales dado un recurso de Fruta
-        /// </summary>
-        /// <param name="resources"></param>
-        /// <returns></returns>
+
         private List<Minerales> getMinerales(string resources)
         {
             List<Minerales> res = null;
@@ -285,6 +278,7 @@ namespace DataSource
 
             return res;
         }
+
         /// <summary>
         /// Lectura de recurso de tipo Mineral
         /// </summary>
@@ -314,15 +308,16 @@ namespace DataSource
             try
             {
                 SparqlResultSet res1 = (SparqlResultSet)e;
-                res = new Minerales();
-
-                var item = res1[0];
-                res.type = "Mineral";
-                res.recurso = resource;
-                res.nombre_comun = (string)item[0].ToString();
-                res.nombre_cientifico = (string)item[1].ToString();
-                res.simbolo_quimico = (string)item[2].ToString();
-
+                if (!res1.IsEmpty)
+                {
+                    res = new Minerales();
+                    var item = res1[0];
+                    res.type = "Mineral";
+                    res.recurso = resource;
+                    res.nombre_comun = (string)item[0].ToString();
+                    res.nombre_cientifico = (string)item[1].ToString();
+                    res.simbolo_quimico = (string)item[2].ToString();
+                }
             }
             catch (Exception ex) { }
 
@@ -359,30 +354,29 @@ namespace DataSource
             try
             {
                 SparqlResultSet res1 = (SparqlResultSet)e;
-                res = new Vitamina();
-
-                var item = res1[0];
-                res.recurso = resource;
-                res.type = "Vitamina";
-                res.nombre_comun = (string)item[0].ToString();
-                res.nombre_cientifico = (string)item[1].ToString();
-                res.descripcion = (string)item[2].ToString();
-
-
-                string dd = item[3].ToString();
-                if (dd != "null")
+                if (!res1.IsEmpty)
                 {
-                    dd = dd.Remove(dd.IndexOf("°C")).Trim();
-                    res.punto_ebullicion = (int)Convert.ToDouble(dd);
+                    res = new Vitamina();
+
+                    var item = res1[0];
+                    res.recurso = resource;
+                    res.type = "Vitamina";
+                    res.nombre_comun = (string)item[0].ToString();
+                    res.nombre_cientifico = (string)item[1].ToString();
+                    res.descripcion = (string)item[2].ToString();
+
+
+                    string dd = item[3].ToString();
+                    if (dd != "null")
+                    { 
+                        res.punto_ebullicion = item[3].ToString();
+                    }
+                     
+                    res.punto_fusion = item[4].ToString(); 
+                    res.peso_molar = dd = item[5].ToString();
+
                 }
 
-                dd = item[4].ToString();
-                dd = dd.Remove(dd.IndexOf("°C")).Trim();
-                res.punto_fusion = (int)Convert.ToDouble(dd);
-
-                dd = item[5].ToString();
-                dd = dd.Remove(dd.IndexOf("g/mol")).Trim();
-                res.peso_molar = (int)Convert.ToDouble(dd);
             }
             catch (Exception ex) { }
 

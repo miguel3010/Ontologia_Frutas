@@ -156,7 +156,6 @@
     <Compile Include="Models\Minerales.cs" />
     <Compile Include="Models\ParametroBusqueda.cs" />
     <Compile Include="Models\RecursoRDF.cs" />
-    <Compile Include="Models\Region.cs" />
     <Compile Include="Models\Vitamina.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

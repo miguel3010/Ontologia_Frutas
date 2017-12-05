@@ -9,6 +9,7 @@ namespace Models
         public List<string> colores;
         public float agua;
         public List<Minerales> mineral;
+        public List<string> region;
         public string textura;
         public string sabor; 
         public List<Vitamina> vitamina;

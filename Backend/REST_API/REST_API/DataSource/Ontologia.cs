@@ -12,10 +12,6 @@ namespace DataSource
         private static string baseURL = @"http://localhost:3030/ontofrutis/data";
         public static List<RecursoRDF> resources;
 
-        public string rdf = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>";
-        public string rdfs = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>";
-        public string data = "PREFIX data:  <http://localhost:3030/ontofrutis/data#>";
-
         public Ontologia()
         {
             if (Ontologia.resources == null)
@@ -48,9 +44,7 @@ namespace DataSource
                 v.descripcion = "daec";
                 v.recurso = "vitamina-c";
                 v.nombre_cientifico = "Vitaminac";
-                v.nombre_comun = "Vitamina C";
-                 
-               
+                v.nombre_comun = "Vitamina C"; 
                 v.type = "Vitamina";
                 f.vitamina = new List<Vitamina>();
                 f.vitamina.Add(v);
@@ -60,21 +54,89 @@ namespace DataSource
                 Ontologia.resources.Add(v);
             }
         }
-
-        public List<Fruta> consulta(ParametroBusqueda param)
+        /// <summary>
+        /// Proceso de Busqueda y filtrado de datos en ontología
+        /// </summary>
+        /// <param name="param"></param>
+        /// <returns></returns>
+        public List<Fruta> consulta(Fruta param)
         {
-            List<Fruta> res = new List<Fruta>();
+            List<Fruta> resultado = null;
+            SparqlParameterizedString query = new SparqlParameterizedString();
+            FusekiConnector fuseki = new FusekiConnector(Ontologia.baseURL);
+            PersistentTripleStore pst = new PersistentTripleStore(fuseki);
+            query.Namespaces.AddNamespace("rdfs", new Uri("http://www.w3.org/2000/01/rdf-schema#"));
+            query.Namespaces.AddNamespace("rdf", new Uri("http://www.w3.org/1999/02/22-rdf-syntax-ns#"));
+            query.Namespaces.AddNamespace("data", new Uri("http://localhost:3030/ontofrutis/data#"));
+            query.Namespaces.AddNamespace("xsd", new Uri("http://www.w3.org/2001/XMLSchema#"));
 
-            foreach (var item in Ontologia.resources)
+            query.CommandText = "SELECT ?fruta WHERE { ";
+            if (param.region != null && param.region.Count > 0)
             {
-                if (item.GetType() == typeof(Fruta))
+                foreach (var item in param.region)
                 {
-                    res.Add((Fruta)item);
+                    query.CommandText += "   ?fruta data:deRegion \"" + item + "\"^^ xsd:string. ";
                 }
             }
-            return res;
-        }
 
+            if (param.colores != null && param.colores.Count > 0)
+            {
+                foreach (var item in param.colores)
+                {
+                    query.CommandText += "   ?fruta data:tieneColor \"" + item + "\"^^ xsd:string. ";
+                }
+            }
+
+            if (param.mineral != null && param.mineral.Count > 0)
+            {
+                foreach (var item in param.mineral)
+                {
+                    query.CommandText += "   ?fruta data:tiene_Mineral data:" + item.recurso + ". ";
+                }
+            }
+
+            if (param.vitamina != null && param.vitamina.Count > 0)
+            {
+                foreach (var item in param.vitamina)
+                {
+                    query.CommandText += "   ?fruta data:tieneVitamina data:" + item.recurso + ". ";
+                }
+            }
+
+            if (!string.IsNullOrEmpty(param.sabor))
+            {
+                query.CommandText += " ?fruta data:tieneSabor \"" + param.sabor + "\"^^xsd:string . ";
+            }
+
+            query.CommandText += " }";
+
+            object e = pst.ExecuteQuery(query.ToString());
+
+            try
+            {
+                SparqlResultSet res1 = (SparqlResultSet)e;
+                if (!res1.IsEmpty)
+                {
+                    resultado = new List<Fruta>();
+                    foreach (var item in res1.Results)
+                    {
+                        Fruta curr = readFruta(getResourceString(item[0].ToString()));
+                        if (curr != null)
+                        {
+                            resultado.Add(curr);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) { }
+
+            return resultado;
+        }
+        /// <summary>
+        /// Obtener el recurso especificado según el recurso en cadena de texto
+        /// </summary>
+        /// <param name="resource"></param>
+        /// <returns></returns>
         public RecursoRDF getRecurso(string resource)
         {
             FusekiConnector fuseki = new FusekiConnector(Ontologia.baseURL);
@@ -163,7 +225,7 @@ namespace DataSource
             query.Namespaces.AddNamespace("rdf", new Uri("http://www.w3.org/1999/02/22-rdf-syntax-ns#"));
             query.Namespaces.AddNamespace("data", new Uri("http://localhost:3030/ontofrutis/data#"));
 
-            query.CommandText = "Select distinct ?nombreComun ?nombreCientifico ?color ?sabor ?textura ?agua ?mineral ?vitamina" +
+            query.CommandText = "Select distinct ?nombreComun ?nombreCientifico ?color ?sabor ?textura ?agua ?mineral ?vitamina " +
                                 "Where {" +
                                 "  data:" + resource + " data:nombreComunFruta ?nombreComun. " +
                                 "  data:" + resource + " data:nombreCientificoFruta ?nombreCientifico. " +
@@ -171,8 +233,8 @@ namespace DataSource
                                 "  data:" + resource + " data:tieneSabor ?sabor. " +
                                 "  data:" + resource + " data:tieneTextura ?textura. " +
                                 "  data:" + resource + " data:tieneAgua ?agua. " +
-                                "  data:" + resource + " data:tieneMineral ?mineral. " +
-                                "  data:" + resource + " data:tieneVitamina ?vitamina. " +
+                                "  OPTIONAL {data:" + resource + " data:tieneMineral ?mineral. }" +
+                                "  OPTIONAL {data:" + resource + " data:tieneVitamina ?vitamina. }" +
                                 "}";
             Console.Write(query.ToString());
             object e = pst.ExecuteQuery(query.ToString());
@@ -204,7 +266,11 @@ namespace DataSource
 
             return res;
         }
-
+        /// <summary>
+        /// Lectura de lista de Vitaminas para un recurso fruta dado
+        /// </summary>
+        /// <param name="resources"></param>
+        /// <returns></returns>
         private List<Vitamina> getVitaminas(string resources)
         {
             List<Vitamina> res = null;
@@ -241,7 +307,11 @@ namespace DataSource
 
             return res;
         }
-
+        /// <summary>
+        /// Lectura de lista de minerales para un recurso fruta dado
+        /// </summary>
+        /// <param name="resources"></param>
+        /// <returns></returns>
         private List<Minerales> getMinerales(string resources)
         {
             List<Minerales> res = null;
@@ -278,7 +348,6 @@ namespace DataSource
 
             return res;
         }
-
         /// <summary>
         /// Lectura de recurso de tipo Mineral
         /// </summary>
@@ -368,12 +437,13 @@ namespace DataSource
 
                     string dd = item[3].ToString();
                     if (dd != "null")
-                    { 
+                    {
+                        dd = dd.Remove(dd.IndexOf("°C")).Trim();
                         res.punto_ebullicion = item[3].ToString();
                     }
                      
                     res.punto_fusion = item[4].ToString(); 
-                    res.peso_molar = dd = item[5].ToString();
+                    res.peso_molar = item[5].ToString();
 
                 }
 

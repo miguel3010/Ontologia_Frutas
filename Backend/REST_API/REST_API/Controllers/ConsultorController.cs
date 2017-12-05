@@ -11,7 +11,7 @@ namespace REST_API.Controllers
     {
         [HttpPost]
         [Route("api/consulta/")]
-        public IHttpActionResult Idioma(ParametroBusqueda parametro)
+        public IHttpActionResult Idioma(Fruta parametro)
         {
             Ontologia service = new Ontologia();
             List<Fruta> recursos = service.consulta(parametro);

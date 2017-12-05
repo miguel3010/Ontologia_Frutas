@@ -19,7 +19,8 @@ import { AgregarFrutaComponent } from  './/Components/agregar-fruta/agregar-frut
 import { ApiService } from './Services/api.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
-import { HttpModule } from '@angular/http'
+import { HttpModule } from '@angular/http';
+import { SliderComponent } from './/Components/slider/slider.component'
 
 const views: Routes = [
   {
@@ -66,6 +67,7 @@ const views: Routes = [
     ItemResultadoComponent,
     AutoresComponent,
     AgregarFrutaComponent,
+    SliderComponent,
     
   ],
   imports: [

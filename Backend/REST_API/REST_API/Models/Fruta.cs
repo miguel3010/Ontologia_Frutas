@@ -10,8 +10,7 @@ namespace Models
         public float agua;
         public List<Minerales> mineral;
         public string textura;
-        public string sabor;
-        public List<Region> region;
+        public string sabor; 
         public List<Vitamina> vitamina;
 
     }

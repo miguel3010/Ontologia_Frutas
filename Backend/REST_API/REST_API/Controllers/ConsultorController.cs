@@ -11,10 +11,61 @@ namespace REST_API.Controllers
     {
         [HttpPost]
         [Route("api/consulta/")]
-        public IHttpActionResult Idioma(Fruta parametro)
+        public IHttpActionResult Idioma(ParametroBusqueda parametro)
         {
             Ontologia service = new Ontologia();
-            List<Fruta> recursos = service.consulta(parametro);
+
+            Fruta a = new Fruta();
+            a.colores = parametro.colores;
+            a.region = parametro.region;
+            a.sabor = parametro.sabor;
+            if (!string.IsNullOrEmpty(parametro.mineral))
+            {
+                string[] minerales;
+                if (parametro.vitamina.IndexOf(',') > 0)
+                {
+                    minerales = parametro.mineral.Split(',');
+                }
+                else
+                {
+                    minerales = new string[1];
+                    minerales[0] = parametro.vitamina;
+                }
+                List<Minerales> m = new List<Minerales>();
+                foreach (var item in minerales)
+                {
+                    Minerales curr = (Minerales)service.getRecurso(item);
+                    if (curr != null) {
+                        m.Add(curr);
+                    }
+                }
+                a.mineral = m;
+
+            }
+
+            if (!string.IsNullOrEmpty(parametro.vitamina))
+            {
+                string[] minerales;
+                if (parametro.vitamina.IndexOf(',') > 0)
+                {
+                    minerales = parametro.mineral.Split(',');
+                }
+                else {
+                    minerales = new string[1];
+                    minerales[0] = parametro.vitamina;
+                }
+                List<Vitamina> m = new List<Vitamina>();
+                foreach (var item in minerales)
+                {
+                    Vitamina curr = (Vitamina)service.getRecurso(item);
+                    if (curr != null)
+                    {
+                        m.Add(curr);
+                    }
+                }
+                a.vitamina = m;
+            }
+            List<Fruta> recursos = service.consulta(a);
             return Ok(recursos);
         }
 
@@ -43,7 +94,8 @@ namespace REST_API.Controllers
                 {
                     return Ok();
                 }
-                else {
+                else
+                {
                     return InternalServerError();
                 }
             }

@@ -1,6 +1,6 @@
 import { stringify } from 'querystring';
 import { Component, OnInit, Input,ElementRef,ViewChild } from '@angular/core'; 
-import { Fruta } from '../../model';
+import { Fruta, ParametroBusqueda } from '../../model';
 import { ApiService } from '../../Services/api.service';
 import { ResultadosComponent } from '../resultados/resultados.component'; 
 declare var jQuery: any;
@@ -27,8 +27,8 @@ export class ParamBusquedaComponent implements OnInit {
   }
 
   consulta(){
-    let f = new Fruta();
-    if(this.color != null){
+    let f = new ParametroBusqueda();
+    if(this.color != null && this.color != ""){
       f.colores = this.color.split(',');
     }
 
@@ -40,9 +40,17 @@ export class ParamBusquedaComponent implements OnInit {
       f.sabor = this.sabor;
     }
 
+    if(this.mineral != null){
+      f.mineral = this.mineral;
+    }
     
+    if(this.vitamina != null){
+      f.vitamina = this.vitamina;
+    }
 
-    console.log(stringify(f));
+
+
+    console.log(f);
     this.api.consulta(f).subscribe(response => {
        this.res.results = response.json();
        this.res.iniciado = true;       

@@ -43,6 +43,28 @@ export class Vitamina {
   type: string;
 }
 
+export class ParametroBusqueda
+{
+    
+    colores: string[];
+    mineral: string;
+    region: string[]; 
+    sabor: string;
+    vitamina: string;
+
+    constructor(){
+      
+      this.colores = new Array();
+      
+      this.mineral = ""; 
+      this.sabor = "";
+      this.colores = new Array();
+      this.region = new Array();
+      this.vitamina = "";  
+  
+    }
+}
+
  
 
 export class Mineral {

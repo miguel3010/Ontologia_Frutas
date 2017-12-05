@@ -20,8 +20,8 @@
 						<a [routerLink]="" (click)="redireccionToFrutas(model)">{{model.nombre_Comun}}</a>
 					</h4>
 					<p class="card-text">Recurso de Tipo:
-						<b> {{model.type}}</b> subTipo:
-						<b>No Climaterica</b>
+						<b> {{model.type}}</b><br> Nombre Científico:
+						<b>{{model.nombre_cientifico}}</b>
 					</p>
 					<a *ngIf="editorCheck" [routerLink]="" (click)="eliminarFruta(model)">
 						<i class="icon-remove-sign"></i>Eliminar</a>

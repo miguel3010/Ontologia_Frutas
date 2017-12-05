@@ -6,7 +6,7 @@ export class Fruta {
   mineral: Mineral[];
   textura: string;
   sabor: string;
-   
+  region: string;
   vitamina: Vitamina[];
   recurso: string;
   clases: any[];

@@ -19,8 +19,7 @@ export class AgregarFrutaComponent implements OnInit {
   ngOnInit() {
   }
 
-  agregarFruta() {
-    alert("cesc");
+  agregarFruta() {    
     this.api.agregarFruta(this.model).subscribe(response => {
       jQuery(this.myModal.nativeElement).modal('hide');
     }, error => {
@@ -28,5 +27,4 @@ export class AgregarFrutaComponent implements OnInit {
       
     });console.log(this.model);
   }
-
 }

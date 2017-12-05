@@ -11,6 +11,7 @@ export class VitaminaComponent implements OnInit {
   constructor() { }
   @Input() public model: Vitamina;
   ngOnInit() {
+     console.log(this.model);
   }
 
 }

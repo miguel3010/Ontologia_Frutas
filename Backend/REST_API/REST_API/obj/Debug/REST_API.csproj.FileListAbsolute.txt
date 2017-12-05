@@ -65,3 +65,10 @@ C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\obj\D
 C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\obj\Debug\REST_API.csproj.CoreCompileInputs.cache
 C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\obj\Debug\REST_API.dll
 C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\obj\Debug\REST_API.pdb
+C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\bin\dotNetRDF.dll
+C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\bin\HtmlAgilityPack.dll
+C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\bin\VDS.Common.dll
+C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\bin\dotNetRDF.xml
+C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\bin\HtmlAgilityPack.pdb
+C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\bin\HtmlAgilityPack.xml
+C:\Users\miamm\Documents\GitHub\Ontologia_Frutas\Backend\REST_API\REST_API\bin\VDS.Common.xml

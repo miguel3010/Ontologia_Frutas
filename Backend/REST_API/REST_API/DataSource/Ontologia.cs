@@ -42,8 +42,7 @@ namespace DataSource
                 f.mineral = new List<Minerales>();
                 f.mineral.Add(m);
 
-                f.region = new List<Region>();
-                f.region.Add(new Region());
+
 
                 Vitamina v = new Vitamina();
                 v.descripcion = "daec";
@@ -195,8 +194,8 @@ namespace DataSource
                 string dd = item[5].ToString();
                 dd = dd.Remove(dd.IndexOf('g')).Trim();
                 res.agua = (int)Convert.ToDouble(dd);
-                res.mineral = getMinerales(resources);
-                res.vitamina = getVitaminas(resources);
+                res.mineral = getMinerales(resource);
+                res.vitamina = getVitaminas(resource);
 
 
             }
@@ -205,14 +204,78 @@ namespace DataSource
             return res;
         }
 
-        private List<Vitamina> getVitaminas(List<RecursoRDF> resources)
+        private List<Vitamina> getVitaminas(string resources)
         {
-            return null;
+            List<Vitamina> res = null;
+            FusekiConnector fuseki = new FusekiConnector(Ontologia.baseURL);
+            PersistentTripleStore pst = new PersistentTripleStore(fuseki);
+
+            SparqlParameterizedString query = new SparqlParameterizedString();
+            query.Namespaces.AddNamespace("rdfs", new Uri("http://www.w3.org/2000/01/rdf-schema#"));
+            query.Namespaces.AddNamespace("rdf", new Uri("http://www.w3.org/1999/02/22-rdf-syntax-ns#"));
+            query.Namespaces.AddNamespace("data", new Uri("http://localhost:3030/ontofrutis/data#"));
+
+            query.CommandText = " Select ?vitamina Where { data:" + resources + " data:tieneVitamina ?vitamina. }";
+
+            Console.Write(query.ToString());
+            object e = pst.ExecuteQuery(query.ToString());
+
+            try
+            {
+                SparqlResultSet res1 = (SparqlResultSet)e;
+                if (!res1.IsEmpty)
+                {
+                    res = new List<Vitamina>();
+                    foreach (var item in res1.Results)
+                    {
+                        Vitamina curr = readVitamina(getResourceString(item[0].ToString()));
+                        if (curr != null)
+                        {
+                            res.Add(curr);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) { }
+
+            return res;
         }
 
-        private List<Minerales> getMinerales(List<RecursoRDF> resources)
+        private List<Minerales> getMinerales(string resources)
         {
-            return null;
+            List<Minerales> res = null;
+            FusekiConnector fuseki = new FusekiConnector(Ontologia.baseURL);
+            PersistentTripleStore pst = new PersistentTripleStore(fuseki);
+
+            SparqlParameterizedString query = new SparqlParameterizedString();
+            query.Namespaces.AddNamespace("rdfs", new Uri("http://www.w3.org/2000/01/rdf-schema#"));
+            query.Namespaces.AddNamespace("rdf", new Uri("http://www.w3.org/1999/02/22-rdf-syntax-ns#"));
+            query.Namespaces.AddNamespace("data", new Uri("http://localhost:3030/ontofrutis/data#"));
+
+            query.CommandText = " Select ?mineral  Where { data:" + resources + " data:tieneMineral ?mineral. }";
+
+            Console.Write(query.ToString());
+            object e = pst.ExecuteQuery(query.ToString());
+
+            try
+            {
+                SparqlResultSet res1 = (SparqlResultSet)e;
+                if (!res1.IsEmpty)
+                {
+                    res = new List<Minerales>();
+                    foreach (var item in res1.Results)
+                    {
+                        Minerales curr = readMineral(getResourceString(item[0].ToString()));
+                        if (curr != null)
+                        {
+                            res.Add(curr);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) { }
+
+            return res;
         }
 
         /// <summary>
@@ -313,9 +376,6 @@ namespace DataSource
                 dd = item[5].ToString();
                 dd = dd.Remove(dd.IndexOf("g/mol")).Trim();
                 res.peso_molar = (int)Convert.ToDouble(dd);
-
-
-
             }
             catch (Exception ex) { }
 

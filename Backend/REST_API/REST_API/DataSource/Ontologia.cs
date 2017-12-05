@@ -203,7 +203,11 @@ namespace DataSource
 
             return res;
         }
-
+        /// <summary>
+        /// Lectura de lista de Vitaminas dado un recurso de Fruta
+        /// </summary>
+        /// <param name="resources"></param>
+        /// <returns></returns>
         private List<Vitamina> getVitaminas(string resources)
         {
             List<Vitamina> res = null;
@@ -240,7 +244,11 @@ namespace DataSource
 
             return res;
         }
-
+        /// <summary>
+        /// Lectura de lista de minerales dado un recurso de Fruta
+        /// </summary>
+        /// <param name="resources"></param>
+        /// <returns></returns>
         private List<Minerales> getMinerales(string resources)
         {
             List<Minerales> res = null;
@@ -277,7 +285,6 @@ namespace DataSource
 
             return res;
         }
-
         /// <summary>
         /// Lectura de recurso de tipo Mineral
         /// </summary>

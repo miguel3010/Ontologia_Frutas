@@ -44,6 +44,15 @@ cd frontend
 ng serve –open
 ``` 
 
+## ScreenShots / Capturas
+![Image](https://github.com/miguel3010/proyectoSimulacion/blob/master/Screenshot-2017-10-28%20Presentaci%C3%B3n.png)
+
+![Image](https://github.com/miguel3010/proyectoSimulacion/blob/master/Screenshot-2017-10-28%20Simulaci%C3%B3n.png)
+
+![Image](https://github.com/miguel3010/proyectoSimulacion/blob/master/Screenshot-2017-10-28%20Simulaci%C3%B3n2.png)
+
+![Image](https://github.com/miguel3010/proyectoSimulacion/blob/master/Screenshot-2017-10-28%20Estad%C3%ADsticas.png)
+
 ## Software usado
 * [Angular](https://angular.io/) - Frontend JS Framework
 * [Bootstrap 4](https://v4-alpha.getbootstrap.com/) - CSS Framework
@@ -56,3 +65,7 @@ ng serve –open
 * **José Varela** - *Fullstack Developer* - [Instagram](https://www.instagram.com/jose_vr26/)
 * **Anell Zheng** - *Fullstack Developer* - [Facebook](https://www.facebook.com/anell.zheng)
 * **David Soto** - *Fullstack Developer* - [Facebook](https://www.facebook.com/stfu.u.n00bster)
+
+## Agradecimientos / Acknowledgments
+
+* Ingeniera Belén Bonilla -Professor-

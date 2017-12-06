@@ -45,13 +45,14 @@ ng serve –open
 ``` 
 
 ## ScreenShots / Capturas
-![Image](https://github.com/miguel3010/proyectoSimulacion/blob/master/Screenshot-2017-10-28%20Presentaci%C3%B3n.png)
+Vista de Presentación
+![Image](https://github.com/miguel3010/Ontologia_Frutas/blob/master/01.png)
 
-![Image](https://github.com/miguel3010/proyectoSimulacion/blob/master/Screenshot-2017-10-28%20Simulaci%C3%B3n.png)
+Vista de Consulta
+![Image](https://github.com/miguel3010/Ontologia_Frutas/blob/master/02.png)
 
-![Image](https://github.com/miguel3010/proyectoSimulacion/blob/master/Screenshot-2017-10-28%20Simulaci%C3%B3n2.png)
-
-![Image](https://github.com/miguel3010/proyectoSimulacion/blob/master/Screenshot-2017-10-28%20Estad%C3%ADsticas.png)
+Formulario de Parámetros
+![Image](https://github.com/miguel3010/Ontologia_Frutas/blob/master/03.png)
 
 ## Software usado
 * [Angular](https://angular.io/) - Frontend JS Framework

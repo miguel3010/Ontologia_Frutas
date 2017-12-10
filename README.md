@@ -35,7 +35,6 @@ Abra la terminal en la ruta del repositorio
 -Servidor Apache Jena Fuseki
 ```
 cd backend
-??????????????
 ```
 
 -Servidor NodeJS (Angular)
@@ -58,6 +57,7 @@ Formulario de Parámetros
 * [Angular](https://angular.io/) - Frontend JS Framework
 * [Bootstrap 4](https://v4-alpha.getbootstrap.com/) - CSS Framework
 * [DotnetRDF](https://github.com/dotnetrdf/) - RDF & SPARQL API
+* [WEB API](https://www.asp.net/web-api) - REST Framework para C#
 
 ## Autores
 
@@ -69,4 +69,4 @@ Formulario de Parámetros
 
 ## Agradecimientos / Acknowledgments
 
-* Ingeniera Belén Bonilla -Professor-
+* Ing. Belén Bonilla -Professor-

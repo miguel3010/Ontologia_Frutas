@@ -1,0 +1,1384 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://localhost:3030/ontofrutis/data#"
+     xml:base="http://localhost:3030/ontofrutis/data"
+     xmlns:data="http://localhost:3030/ontofrutis/data#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://localhost:3030/ontofrutis/data">
+        <owl:versionIRI rdf:resource="http://localhost:3030/ontofrutis/data"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#tieneVitamina -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:3030/ontofrutis/data#tieneVitamina">
+        <rdfs:domain rdf:resource="http://localhost:3030/ontofrutis/data#Fruta"/>
+        <rdfs:range rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#tiene_Mineral -->
+
+    <owl:ObjectProperty rdf:about="http://localhost:3030/ontofrutis/data#tiene_Mineral">
+        <rdfs:domain rdf:resource="http://localhost:3030/ontofrutis/data#Fruta"/>
+        <rdfs:range rdf:resource="http://localhost:3030/ontofrutis/data#Minerales"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#deRegion -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/ontofrutis/data#deRegion">
+        <rdfs:domain rdf:resource="http://localhost:3030/ontofrutis/data#Fruta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#descripcionVitamina -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/ontofrutis/data#descripcionVitamina">
+        <rdfs:domain rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#nombreCientificoFruta -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/ontofrutis/data#nombreCientificoFruta">
+        <rdfs:domain rdf:resource="http://localhost:3030/ontofrutis/data#Fruta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#nombreCientificoMineral -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/ontofrutis/data#nombreCientificoMineral">
+        <rdfs:domain rdf:resource="http://localhost:3030/ontofrutis/data#Minerales"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#nombreComunFruta -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/ontofrutis/data#nombreComunFruta">
+        <rdfs:domain rdf:resource="http://localhost:3030/ontofrutis/data#Fruta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#nombreComunMineral -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/ontofrutis/data#nombreComunMineral">
+        <rdfs:domain rdf:resource="http://localhost:3030/ontofrutis/data#Minerales"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#nombreComunVitamina -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/ontofrutis/data#nombreComunVitamina">
+        <rdfs:domain rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#nombreRealVitamina -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/ontofrutis/data#nombreRealVitamina">
+        <rdfs:domain rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#pesoMolarVitamina -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/ontofrutis/data#pesoMolarVitamina">
+        <rdfs:domain rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#puntodeEbullisionVitamina -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/ontofrutis/data#puntodeEbullisionVitamina">
+        <rdfs:domain rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#puntodeFusionVitamina -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/ontofrutis/data#puntodeFusionVitamina">
+        <rdfs:domain rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#simboloQuimicoMineral -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/ontofrutis/data#simboloQuimicoMineral">
+        <rdfs:domain rdf:resource="http://localhost:3030/ontofrutis/data#Minerales"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#tieneAgua -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/ontofrutis/data#tieneAgua">
+        <rdfs:domain rdf:resource="http://localhost:3030/ontofrutis/data#Fruta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#tieneColor -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/ontofrutis/data#tieneColor">
+        <rdfs:domain rdf:resource="http://localhost:3030/ontofrutis/data#Fruta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#tieneSabor -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/ontofrutis/data#tieneSabor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://localhost:3030/ontofrutis/data#Fruta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#tieneTextura -->
+
+    <owl:DatatypeProperty rdf:about="http://localhost:3030/ontofrutis/data#tieneTextura">
+        <rdfs:domain rdf:resource="http://localhost:3030/ontofrutis/data#Fruta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Climatéricas -->
+
+    <owl:Class rdf:about="http://localhost:3030/ontofrutis/data#Climatéricas">
+        <rdfs:subClassOf rdf:resource="http://localhost:3030/ontofrutis/data#Fruta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Fruta -->
+
+    <owl:Class rdf:about="http://localhost:3030/ontofrutis/data#Fruta"/>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Hidrosolubles -->
+
+    <owl:Class rdf:about="http://localhost:3030/ontofrutis/data#Hidrosolubles">
+        <rdfs:subClassOf rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Liposolubles -->
+
+    <owl:Class rdf:about="http://localhost:3030/ontofrutis/data#Liposolubles">
+        <rdfs:subClassOf rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Minerales -->
+
+    <owl:Class rdf:about="http://localhost:3030/ontofrutis/data#Minerales"/>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#No_Climatéricas -->
+
+    <owl:Class rdf:about="http://localhost:3030/ontofrutis/data#No_Climatéricas">
+        <rdfs:subClassOf rdf:resource="http://localhost:3030/ontofrutis/data#Fruta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Vitamina -->
+
+    <owl:Class rdf:about="http://localhost:3030/ontofrutis/data#Vitamina"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Aceituna -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Aceituna">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#No_Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B12"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_D"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_K"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Templado</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olea europaea</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aceituna</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">79.99 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verde</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acido</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blanda</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Aguacate -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Aguacate">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B9"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_K"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tropical</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Persea americana</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aguacate</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">73.23 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verde</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nuez</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blanda</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Albaricoque -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Albaricoque">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Cacao -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Cacao">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#No_Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B12"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_D"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tropical</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theobroma cacao</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cacao</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.6 ml</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chocolate</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amargo</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rugosa</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Calcio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Calcio">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Minerales"/>
+        <nombreCientificoMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calx</nombreCientificoMineral>
+        <nombreComunMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calcio</nombreComunMineral>
+        <simboloQuimicoMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ca</simboloQuimicoMineral>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Caqui -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Caqui">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Cereza -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Cereza">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#No_Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B12"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_D"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_K"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Templado</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prunus cerasus</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cereza</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">82.25g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rojo</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blanda</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Chirimoya -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Chirimoya">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Ciruela -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Ciruela">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B9"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_K"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Templado</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prunus domestica</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ciruela</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">87 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morado</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agridulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blanda</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Fluor -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Fluor">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Minerales"/>
+        <nombreCientificoMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fluere</nombreCientificoMineral>
+        <nombreComunMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fluor</nombreComunMineral>
+        <simboloQuimicoMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</simboloQuimicoMineral>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Fosforo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Fosforo">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Minerales"/>
+        <nombreCientificoMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phosphoros</nombreCientificoMineral>
+        <nombreComunMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fosforo</nombreComunMineral>
+        <simboloQuimicoMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P</simboloQuimicoMineral>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Frambuesa -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Frambuesa">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#No_Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B12"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_D"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_K"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Templado</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rubus idaeus L.</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frambuesa</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">85.75 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rojo</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rugosa</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Fresa -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Fresa">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#No_Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B12"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_D"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_K"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Templado</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fragaria L</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fresa</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">90.95 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rojo</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agridulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rugosa</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Guanábana -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Guanábana">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Guayaba -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Guayaba">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B9"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_K"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tropical</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Psidium</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guayaba</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">81 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verde</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blanda</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Hierro -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Hierro">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Minerales"/>
+        <nombreCientificoMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ferrum</nombreCientificoMineral>
+        <nombreComunMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hierro</nombreComunMineral>
+        <simboloQuimicoMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fe</simboloQuimicoMineral>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Higo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Higo">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Jitomate -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Jitomate">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Kiwi -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Kiwi">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B9"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_K"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Templada</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actinidia deliciosa</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kiwi</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">83.07 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chocolate</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agridulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blanda</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Limón -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Limón">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#No_Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B12"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B9"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_D"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tropical</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Citrus × limon</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Limon</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">92.31g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verde</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ácido</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rugosa</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Magnesio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Magnesio">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Minerales"/>
+        <nombreCientificoMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnesia</nombreCientificoMineral>
+        <nombreComunMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnesio</nombreComunMineral>
+        <simboloQuimicoMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mg</simboloQuimicoMineral>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Mandarina -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Mandarina">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#No_Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B12"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B9"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tropical</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Citrus reticulata</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mandarina</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">85.17 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anaranjado</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rugosa</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Mango -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Mango">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B9"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_K"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tropical</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mangifera indica</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mango</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">83.46 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amarillo</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agridulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blanda</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Manzana -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Manzana">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B9"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_K"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Templado</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malus pumila</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manzana</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">85.56 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rojo</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agridulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Firme</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Melocotón -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Melocotón">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Melón -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Melón">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B9"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_K"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tropical</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cucumis melo</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melón</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">90 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verde</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blanda</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Naranja -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Naranja">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#No_Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B7"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B9"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fluor"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Yodo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tropical</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Citrus × sinensis</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naranja</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">86.75g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anaranjado</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agridulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rugosa</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Nectarina -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Nectarina">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B12"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B9"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_D"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_K"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Templado</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prunus persica</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nectarina</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">87 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rojo</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Firme</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Papaya -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Papaya">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B9"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_K"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tropical</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carica papaya</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amarillo</nombreComunFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Papaya</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">88 g</tieneAgua>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blanda</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Pepino -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Pepino">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#No_Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_K"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tropical</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cucumis sativus L</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pepino</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">95.23 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verde</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insípido</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lisa</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Pera -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Pera">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B9"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_K"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frío</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pyrus</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pera</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">84 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verde</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agridulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Firme</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Pimiento -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Pimiento">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#No_Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_K"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tropical</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capsicum annuum</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pimiento</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">93.89 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verde</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agridulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carnosa</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Piña -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Piña">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#No_Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B12"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_D"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tropical</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ananas comosus</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piña</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">86.0 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amarillo</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agridulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rugosa</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Plátano -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Plátano">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fluor"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tropical</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musa paradisiaca</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banano</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">74.91 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amarillo</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agridulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blanda</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Potasio -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Potasio">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Minerales"/>
+        <nombreCientificoMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K</nombreCientificoMineral>
+        <nombreCientificoMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kalium</nombreCientificoMineral>
+        <nombreComunMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Potasio</nombreComunMineral>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Sandía -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Sandía">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tropical</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Citrullus lanatus</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandía</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">91.45 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verde</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blanda</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Tamarindo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Tamarindo">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#No_Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B9"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_K"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tropical</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tamarindus indica</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tamarindo</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31.4g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chocolate</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agridulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rugosa</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Toronja -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Toronja">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#No_Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B3"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B5"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B9"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tropical</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Citrus × tangerina</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toronja</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">89.1 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anaranjado</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acido</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rugosa</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Uva -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Uva">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#No_Climatéricas"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_A"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B1"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B2"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_B6"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_C"/>
+        <tieneVitamina rdf:resource="http://localhost:3030/ontofrutis/data#Vitamina_E"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Calcio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Fosforo"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Hierro"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Magnesio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Potasio"/>
+        <tiene_Mineral rdf:resource="http://localhost:3030/ontofrutis/data#Zinc"/>
+        <deRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Templado</deRegion>
+        <nombreCientificoFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitis vinífera</nombreCientificoFruta>
+        <nombreComunFruta rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uva</nombreComunFruta>
+        <tieneAgua rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80.5 g</tieneAgua>
+        <tieneColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morado</tieneColor>
+        <tieneSabor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agridulce</tieneSabor>
+        <tieneTextura rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blanda</tieneTextura>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Vitamina_A -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Vitamina_A">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Liposolubles"/>
+        <descripcionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">es una vitamina liposoluble (es decir que es soluble en cuerpos grasos, aceites y que no se puede liberar en la orina como normalmente lo hacen las vitaminas hidrosolubles) que se requiere en varios procesos biológicos, tales como la visión, el desarrollo del sistema inmunitario, la formación y mantenimiento de las células epiteliales (de la piel y las mucosas), el desarrollo embrionario y el crecimiento</descripcionVitamina>
+        <nombreComunVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamina A</nombreComunVitamina>
+        <nombreRealVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">retinol</nombreRealVitamina>
+        <pesoMolarVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">286,4516 g/mol</pesoMolarVitamina>
+        <puntodeEbullisionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">125 °C</puntodeEbullisionVitamina>
+        <puntodeFusionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80°C</puntodeFusionVitamina>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Vitamina_B1 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Vitamina_B1">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Hidrosolubles"/>
+        <nombreComunVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamina B1</nombreComunVitamina>
+        <nombreRealVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La vitamina B1 ayuda a las células del cuerpo a convertir los carbohidratos en energía. Es también esencial para las funciones cardiacas, y músculos. Cumple también una importante función en las membranas nerviosas y en la conducción nerviosa. Puede reforzar el sistema inmune y mejorar la capacidad corporal de reaccionar ante situaciones de estrés.</nombreRealVitamina>
+        <nombreRealVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tiamina</nombreRealVitamina>
+        <pesoMolarVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">265,356 g/mol</pesoMolarVitamina>
+        <puntodeEbullisionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</puntodeEbullisionVitamina>
+        <puntodeFusionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-285 °C</puntodeFusionVitamina>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Vitamina_B12 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Vitamina_B12">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Hidrosolubles"/>
+        <descripcionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">es una vitamina hidrosoluble esencial para el funcionamiento normal del cerebro, del sistema nervioso, y para la formación de la sangre y de varias proteínas.</descripcionVitamina>
+        <nombreComunVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamina B12</nombreComunVitamina>
+        <nombreRealVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cobalamina</nombreRealVitamina>
+        <pesoMolarVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1355.37 g/mol</pesoMolarVitamina>
+        <puntodeEbullisionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Null</puntodeEbullisionVitamina>
+        <puntodeFusionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">300 °C</puntodeFusionVitamina>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Vitamina_B2 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Vitamina_B2">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Hidrosolubles"/>
+        <descripcionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamina B2, conocida como riboflavina, es un micronutriente absorbido fácilmente con un papel clave para la conservación de la salud en humanos y animales.</descripcionVitamina>
+        <nombreComunVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamina B2</nombreComunVitamina>
+        <nombreRealVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">riboflavina</nombreRealVitamina>
+        <pesoMolarVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">265,356 g/mol</pesoMolarVitamina>
+        <puntodeEbullisionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</puntodeEbullisionVitamina>
+        <puntodeFusionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-285 °C</puntodeFusionVitamina>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Vitamina_B3 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Vitamina_B3">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Hidrosolubles"/>
+        <descripcionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La vitamina B3 (conocida también como niacina, ácido nicotínico y vitamina PP) es un compuesto orgánico y uno de los cuarenta a ochenta nutrientes humanos esenciales.</descripcionVitamina>
+        <nombreComunVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamina B3</nombreComunVitamina>
+        <nombreRealVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">niacina</nombreRealVitamina>
+        <pesoMolarVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123.1094 g/mol</pesoMolarVitamina>
+        <puntodeEbullisionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</puntodeEbullisionVitamina>
+        <puntodeFusionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">237 ℃</puntodeFusionVitamina>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Vitamina_B5 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Vitamina_B5">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Hidrosolubles"/>
+        <descripcionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La vitamina B5 es esencial para todas las formas de vida. Juega un papel importante en el cuidado del cabello, piel y sangre. De hecho, es también esencial para el metabolismo de alimentos.</descripcionVitamina>
+        <nombreComunVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamina B5</nombreComunVitamina>
+        <nombreRealVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ácido pantoténico</nombreRealVitamina>
+        <pesoMolarVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</pesoMolarVitamina>
+        <puntodeEbullisionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</puntodeEbullisionVitamina>
+        <puntodeFusionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">170 ℃</puntodeFusionVitamina>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Vitamina_B6 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Vitamina_B6">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Hidrosolubles"/>
+        <descripcionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitamina hidrosoluble, esto implica que se elimina a través de la orina, y se ha de reponer diariamente con la dieta. Se encuentra en el germen de trigo, carne, huevos, pescado y verduras, legumbres, nueces, alimentos ricos en granos integrales, al igual que en los panes y cereales enriquecidos.</descripcionVitamina>
+        <nombreComunVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamina B6</nombreComunVitamina>
+        <nombreRealVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">piridoxina</nombreRealVitamina>
+        <pesoMolarVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">205,64g/mol</pesoMolarVitamina>
+        <puntodeEbullisionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</puntodeEbullisionVitamina>
+        <puntodeFusionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">205 ℃</puntodeFusionVitamina>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Vitamina_B7 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Vitamina_B7">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Hidrosolubles"/>
+        <descripcionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">es una vitamina estable al calor, soluble en agua y alcohol, y susceptible a la oxidación que interviene en el metabolismo de los hidratos de carbono, grasas, aminoácidos y purinas.</descripcionVitamina>
+        <nombreComunVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamina B7</nombreComunVitamina>
+        <nombreRealVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biotina</nombreRealVitamina>
+        <pesoMolarVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">244.31 g/mol</pesoMolarVitamina>
+        <puntodeEbullisionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Null</puntodeEbullisionVitamina>
+        <puntodeFusionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">232 °C</puntodeFusionVitamina>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Vitamina_B9 -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Vitamina_B9">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Hidrosolubles"/>
+        <descripcionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">es una vitamina hidrosoluble del complejo de vitaminas B, necesaria para la formación de proteínas estructurales y hemoglobina (y por esto, transitivamente, de los glóbulos rojos).</descripcionVitamina>
+        <nombreComunVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamina B9</nombreComunVitamina>
+        <nombreRealVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ácido fólico</nombreRealVitamina>
+        <pesoMolarVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">441.40 g·mol−1</pesoMolarVitamina>
+        <puntodeEbullisionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">-273,15 ° C</puntodeEbullisionVitamina>
+        <puntodeFusionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">250°C</puntodeFusionVitamina>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Vitamina_C -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Vitamina_C">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Hidrosolubles"/>
+        <descripcionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La presencia de esta vitamina es requerida para un cierto número de reacciones metabólicas2 en todos los animales y plantas y es creada internamente por casi todos los organismos, siendo los humanos una notable excepción.</descripcionVitamina>
+        <nombreComunVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamina C</nombreComunVitamina>
+        <nombreRealVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ácido ascórbico</nombreRealVitamina>
+        <pesoMolarVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">176,13 g/mol</pesoMolarVitamina>
+        <puntodeEbullisionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">553 °C</puntodeEbullisionVitamina>
+        <puntodeFusionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">190 °C</puntodeFusionVitamina>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Vitamina_D -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Vitamina_D">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Liposolubles"/>
+        <descripcionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">:  La vitamina D, calciferol o antirraquítica es un heterolípido insaponificable del grupo de los esteroides. Se le llama también vitamina antirraquítica ya que su deficiencia provoca raquitismo.</descripcionVitamina>
+        <nombreComunVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamina D</nombreComunVitamina>
+        <nombreRealVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calciferol</nombreRealVitamina>
+        <pesoMolarVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</pesoMolarVitamina>
+        <puntodeEbullisionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</puntodeEbullisionVitamina>
+        <puntodeFusionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">null</puntodeFusionVitamina>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Vitamina_E -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Vitamina_E">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Liposolubles"/>
+        <descripcionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitamina liposoluble que actúa como antioxidante a nivel de la síntesis del pigmento hemo, que es una parte esencial de la hemoglobina de los glóbulos rojos.</descripcionVitamina>
+        <nombreComunVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamina E</nombreComunVitamina>
+        <nombreRealVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">α-tocoferol</nombreRealVitamina>
+        <pesoMolarVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">430.71 g/mol</pesoMolarVitamina>
+        <puntodeEbullisionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">485.9℃</puntodeEbullisionVitamina>
+        <puntodeFusionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.5℃</puntodeFusionVitamina>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Vitamina_K -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Vitamina_K">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Liposolubles"/>
+        <descripcionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La única misión conocida hasta el momento de la vitamina K es la de actuar como cofactor de un enzima concreto, una carboxilasa, que cataliza la conversión de algunos restos de ácido glutámico de ciertas proteínas</descripcionVitamina>
+        <nombreComunVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vitamina K</nombreComunVitamina>
+        <nombreRealVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fitomenadiona</nombreRealVitamina>
+        <pesoMolarVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">450,69g/mol</pesoMolarVitamina>
+        <puntodeEbullisionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">113.8℃</puntodeEbullisionVitamina>
+        <puntodeEbullisionVitamina rdf:datatype="http://www.w3.org/2001/XMLSchema#string">304.5℃</puntodeEbullisionVitamina>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Yodo -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Yodo">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Minerales"/>
+        <nombreCientificoMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iodes</nombreCientificoMineral>
+        <nombreComunMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yodo</nombreComunMineral>
+        <simboloQuimicoMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I</simboloQuimicoMineral>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://localhost:3030/ontofrutis/data#Zinc -->
+
+    <owl:NamedIndividual rdf:about="http://localhost:3030/ontofrutis/data#Zinc">
+        <rdf:type rdf:resource="http://localhost:3030/ontofrutis/data#Minerales"/>
+        <nombreCientificoMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zink</nombreCientificoMineral>
+        <nombreComunMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zinc</nombreComunMineral>
+        <simboloQuimicoMineral rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zn</simboloQuimicoMineral>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -1,4 +1,4 @@
-# Título de Proyecto
+﻿# Título de Proyecto
 OntoFrutis - Ontología de Frutas
 
 ## Objetivo General: 
@@ -23,7 +23,7 @@ La aplicación se desarrollará en el lenguaje de programacion C# y se utilizar�
 
 Todo lo que necesitas instalar para la configuración del proyecto.
 
-
+-Apache jena Fuseki v.2.4  
 -Servidor NodeJS (Angular) / NodeJS Server (Angular):
 
 ```
